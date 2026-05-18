@@ -33,7 +33,12 @@ const COWS_DATA = [
             "IMG-20260518-WA0078.jpg",
             "IMG-20260518-WA0080.jpg",
             "IMG-20260518-WA0109.jpg",
-            "IMG-20260518-WA0137.jpg"
+            "IMG-20260518-WA0137.jpg",
+            "IMG-20260518-WA0065.jpg",
+            "IMG-20260518-WA0068.jpg",
+            "IMG-20260518-WA0116.jpg",
+            "IMG-20260518-WA0119.jpg",
+            "IMG-20260518-WA0106.jpg"
         ],
         "images": [
             "images/2602(1).jpg",
@@ -41,9 +46,14 @@ const COWS_DATA = [
             "images/2602(3).jpg",
             "images/2602(4).jpg",
             "images/2602(5).jpg",
-            "images/2602(6).jpg"
+            "images/2602(6).jpg",
+            "images/2602(7).jpg",
+            "images/2602(8).jpg",
+            "images/2602(9).jpg",
+            "images/2602(10).jpg",
+            "images/2602(11).jpg"
         ],
-        "image_count": 6,
+        "image_count": 11,
         "price": "Tk 275,000",
         "status": "available"
     },
@@ -210,14 +220,18 @@ const COWS_DATA = [
         "original_names": [
             "IMG-20260518-WA0043.jpg",
             "IMG-20260518-WA0054.jpg",
-            "IMG-20260518-WA0112.jpg"
+            "IMG-20260518-WA0112.jpg",
+            "IMG-20260518-WA0084.jpg",
+            "IMG-20260518-WA0085.jpg"
         ],
         "images": [
             "images/2610(1).jpg",
             "images/2610(2).jpg",
-            "images/2610(3).jpg"
+            "images/2610(3).jpg",
+            "images/2610(4).jpg",
+            "images/2610(5).jpg"
         ],
-        "image_count": 3,
+        "image_count": 5,
         "price": "Tk 380,000",
         "status": "available"
     },
@@ -294,26 +308,6 @@ const COWS_DATA = [
             "images/2621(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego",
-        "status": "available"
-    },
-    {
-        "tag": "2623",
-        "original_names": [
-            "IMG-20260518-WA0065.jpg",
-            "IMG-20260518-WA0068.jpg",
-            "IMG-20260518-WA0116.jpg",
-            "IMG-20260518-WA0119.jpg",
-            "IMG-20260518-WA0106.jpg"
-        ],
-        "images": [
-            "images/2623(1).jpg",
-            "images/2623(2).jpg",
-            "images/2623(3).jpg",
-            "images/2623(4).jpg",
-            "images/2623(5).jpg"
-        ],
-        "image_count": 5,
         "price": "Nego",
         "status": "available"
     },
@@ -420,30 +414,6 @@ const COWS_DATA = [
         "status": "stock_out"
     },
     {
-        "tag": "2639",
-        "original_names": [
-            "IMG-20260518-WA0084.jpg"
-        ],
-        "images": [
-            "images/2639(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "available"
-    },
-    {
-        "tag": "2640",
-        "original_names": [
-            "IMG-20260518-WA0085.jpg"
-        ],
-        "images": [
-            "images/2640(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "available"
-    },
-    {
         "tag": "2642",
         "original_names": [
             "IMG-20260518-WA0090.jpg"
@@ -488,6 +458,58 @@ const COWS_DATA = [
             "images/2650(1).jpg"
         ],
         "image_count": 1,
+        "price": "Nego",
+        "status": "available"
+    },
+    {
+        "tag": "2651",
+        "images": [
+            "images/2651(1).jpg",
+            "images/2651(2).jpg"
+        ],
+        "image_count": 2,
+        "original_names": [
+            "2651.jpeg",
+            "2651(1).jpeg"
+        ],
+        "price": "Nego",
+        "status": "available"
+    },
+    {
+        "tag": "2652",
+        "images": [
+            "images/2652(1).jpg"
+        ],
+        "image_count": 1,
+        "original_names": [
+            "2652.jpeg"
+        ],
+        "price": "Nego",
+        "status": "available"
+    },
+    {
+        "tag": "2653",
+        "images": [
+            "images/2653(1).jpg"
+        ],
+        "image_count": 1,
+        "original_names": [
+            "2653.jpeg"
+        ],
+        "price": "Nego",
+        "status": "available"
+    },
+    {
+        "tag": "2657",
+        "images": [
+            "images/2657(1).jpg",
+            "images/2657(2).jpg"
+        ],
+        "image_count": 2,
+        "original_names": [
+            "2657.jpeg",
+            "2657(1).jpeg"
+        ],
         "price": "Nego",
         "status": "available"
     }
