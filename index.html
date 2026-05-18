@@ -144,7 +144,7 @@
                     <h3>Marketplace Specifications</h3>
                     <div class="marketplace-row">
                         <div class="market-badge market-badge-price" style="padding: 12px 10px;">
-                            <span class="market-badge-val" style="font-size: 1rem;">Nego</span>
+                            <span class="market-badge-val" style="font-size: 1rem;" id="modal-price-val">Nego</span>
                             <span class="market-badge-label">Price Specification</span>
                         </div>
                         <div class="market-badge market-badge-weight" style="padding: 12px 10px;">
@@ -298,7 +298,7 @@
                         <!-- Marketplace details -->
                         <div class="marketplace-row">
                             <div class="market-badge market-badge-price">
-                                <span class="market-badge-val">Nego</span>
+                                <span class="market-badge-val">${cow.price || "Nego"}</span>
                                 <span class="market-badge-label">Price</span>
                             </div>
                             <div class="market-badge market-badge-weight">
@@ -400,6 +400,7 @@
             modalImgCount.textContent = `${cow.image_count} photos identified`;
             modalStatGroup.textContent = cow.tag;
             modalStatPhotos.textContent = cow.image_count;
+            document.getElementById('modal-price-val').textContent = cow.price || "Nego";
             
             // Render Image Viewer
             updateActiveImage();

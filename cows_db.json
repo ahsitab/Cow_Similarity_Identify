@@ -21,7 +21,8 @@
             "images/2601(7).jpg",
             "images/2601(8).jpg"
         ],
-        "image_count": 8
+        "image_count": 8,
+        "price": "Tk 360,000"
     },
     {
         "tag": "2602",
@@ -41,7 +42,8 @@
             "images/2602(5).jpg",
             "images/2602(6).jpg"
         ],
-        "image_count": 6
+        "image_count": 6,
+        "price": "Tk 275,000"
     },
     {
         "tag": "2603",
@@ -61,7 +63,8 @@
             "images/2603(5).jpg",
             "images/2603(6).jpg"
         ],
-        "image_count": 6
+        "image_count": 6,
+        "price": "Tk 340,000"
     },
     {
         "tag": "2604",
@@ -70,16 +73,27 @@
             "IMG-20260518-WA0053.jpg",
             "IMG-20260518-WA0066.jpg",
             "IMG-20260518-WA0075.jpg",
-            "IMG-20260518-WA0105.jpg"
+            "IMG-20260518-WA0105.jpg",
+            "2.jpeg",
+            "IMG-20260518-WA0091.jpg",
+            "IMG-20260518-WA0045.jpg",
+            "IMG-20260518-WA0079.jpg",
+            "IMG-20260518-WA0033.jpg"
         ],
         "images": [
             "images/2604(1).jpg",
             "images/2604(2).jpg",
             "images/2604(3).jpg",
             "images/2604(4).jpg",
-            "images/2604(5).jpg"
+            "images/2604(5).jpg",
+            "images/2604(6).jpeg",
+            "images/2604(7).jpg",
+            "images/2604(8).jpg",
+            "images/2604(9).jpg",
+            "images/2604(10).jpg"
         ],
-        "image_count": 5
+        "image_count": 10,
+        "price": "Tk 470,000"
     },
     {
         "tag": "2605",
@@ -88,16 +102,23 @@
             "IMG-20260518-WA0039.jpg",
             "IMG-20260518-WA0072.jpg",
             "IMG-20260518-WA0092.jpg",
-            "IMG-20260518-WA0125.jpg"
+            "IMG-20260518-WA0125.jpg",
+            "IMG-20260518-WA0069.jpg",
+            "IMG-20260518-WA0086.jpg",
+            "IMG-20260518-WA0089.jpg"
         ],
         "images": [
             "images/2605(1).jpg",
             "images/2605(2).jpg",
             "images/2605(3).jpg",
             "images/2605(4).jpg",
-            "images/2605(5).jpg"
+            "images/2605(5).jpg",
+            "images/2605(6).jpg",
+            "images/2605(7).jpg",
+            "images/2605(8).jpg"
         ],
-        "image_count": 5
+        "image_count": 8,
+        "price": "Tk 530,000"
     },
     {
         "tag": "2606",
@@ -113,7 +134,8 @@
             "images/2606(3).jpg",
             "images/2606(4).jpg"
         ],
-        "image_count": 4
+        "image_count": 4,
+        "price": "Tk 130,000"
     },
     {
         "tag": "2607",
@@ -121,15 +143,22 @@
             "IMG-20260518-WA0037.jpg",
             "IMG-20260518-WA0050.jpg",
             "IMG-20260518-WA0095.jpg",
-            "IMG-20260518-WA0136.jpg"
+            "IMG-20260518-WA0136.jpg",
+            "IMG-20260518-WA0052.jpg",
+            "WhatsApp Image 2026-05-16 at 21.26.55.jpeg",
+            "IMG-20260518-WA0101.jpg"
         ],
         "images": [
             "images/2607(1).jpg",
             "images/2607(2).jpg",
             "images/2607(3).jpg",
-            "images/2607(4).jpg"
+            "images/2607(4).jpg",
+            "images/2607(5).jpg",
+            "images/2607(6).jpeg",
+            "images/2607(7).jpg"
         ],
-        "image_count": 4
+        "image_count": 7,
+        "price": "Tk 160,000"
     },
     {
         "tag": "2608",
@@ -145,7 +174,8 @@
             "images/2608(3).jpg",
             "images/2608(4).jpg"
         ],
-        "image_count": 4
+        "image_count": 4,
+        "price": "Tk 150,000"
     },
     {
         "tag": "2609",
@@ -159,7 +189,8 @@
             "images/2609(2).jpg",
             "images/2609(3).jpg"
         ],
-        "image_count": 3
+        "image_count": 3,
+        "price": "Nego"
     },
     {
         "tag": "2610",
@@ -173,87 +204,27 @@
             "images/2610(2).jpg",
             "images/2610(3).jpg"
         ],
-        "image_count": 3
+        "image_count": 3,
+        "price": "Tk 380,000"
     },
     {
         "tag": "2611",
         "original_names": [
             "IMG-20260518-WA0046.jpg",
             "IMG-20260518-WA0082.jpg",
-            "IMG-20260518-WA0123.jpg"
+            "IMG-20260518-WA0123.jpg",
+            "IMG-20260518-WA0056.jpg",
+            "IMG-20260518-WA0064.jpg"
         ],
         "images": [
             "images/2611(1).jpg",
             "images/2611(2).jpg",
-            "images/2611(3).jpg"
+            "images/2611(3).jpg",
+            "images/2611(4).jpg",
+            "images/2611(5).jpg"
         ],
-        "image_count": 3
-    },
-    {
-        "tag": "2612",
-        "original_names": [
-            "IMG-20260518-WA0048.jpg",
-            "IMG-20260518-WA0057.jpg",
-            "IMG-20260518-WA0111.jpg"
-        ],
-        "images": [
-            "images/2612(1).jpg",
-            "images/2612(2).jpg",
-            "images/2612(3).jpg"
-        ],
-        "image_count": 3
-    },
-    {
-        "tag": "2613",
-        "original_names": [
-            "IMG-20260518-WA0061.jpg",
-            "IMG-20260518-WA0074.jpg",
-            "IMG-20260518-WA0114.jpg"
-        ],
-        "images": [
-            "images/2613(1).jpg",
-            "images/2613(2).jpg",
-            "images/2613(3).jpg"
-        ],
-        "image_count": 3
-    },
-    {
-        "tag": "2614",
-        "original_names": [
-            "IMG-20260518-WA0077.jpg",
-            "IMG-20260518-WA0100.jpg",
-            "IMG-20260518-WA0121.jpg"
-        ],
-        "images": [
-            "images/2614(1).jpg",
-            "images/2614(2).jpg",
-            "images/2614(3).jpg"
-        ],
-        "image_count": 3
-    },
-    {
-        "tag": "2615",
-        "original_names": [
-            "11.jpeg",
-            "IMG-20260518-WA0040.jpg"
-        ],
-        "images": [
-            "images/2615(1).jpeg",
-            "images/2615(2).jpg"
-        ],
-        "image_count": 2
-    },
-    {
-        "tag": "2616",
-        "original_names": [
-            "2.jpeg",
-            "IMG-20260518-WA0091.jpg"
-        ],
-        "images": [
-            "images/2616(1).jpeg",
-            "images/2616(2).jpg"
-        ],
-        "image_count": 2
+        "image_count": 5,
+        "price": "Tk 480,000"
     },
     {
         "tag": "2617",
@@ -265,7 +236,8 @@
             "images/2617(1).jpg",
             "images/2617(2).jpg"
         ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2618",
@@ -277,7 +249,8 @@
             "images/2618(1).jpg",
             "images/2618(2).jpg"
         ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2619",
@@ -289,19 +262,8 @@
             "images/2619(1).jpg",
             "images/2619(2).jpg"
         ],
-        "image_count": 2
-    },
-    {
-        "tag": "2620",
-        "original_names": [
-            "IMG-20260518-WA0045.jpg",
-            "IMG-20260518-WA0079.jpg"
-        ],
-        "images": [
-            "images/2620(1).jpg",
-            "images/2620(2).jpg"
-        ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2621",
@@ -313,43 +275,27 @@
             "images/2621(1).jpg",
             "images/2621(2).jpg"
         ],
-        "image_count": 2
-    },
-    {
-        "tag": "2622",
-        "original_names": [
-            "IMG-20260518-WA0052.jpg",
-            "WhatsApp Image 2026-05-16 at 21.26.55.jpeg"
-        ],
-        "images": [
-            "images/2622(1).jpg",
-            "images/2622(2).jpeg"
-        ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2623",
         "original_names": [
             "IMG-20260518-WA0065.jpg",
-            "IMG-20260518-WA0068.jpg"
+            "IMG-20260518-WA0068.jpg",
+            "IMG-20260518-WA0116.jpg",
+            "IMG-20260518-WA0119.jpg",
+            "IMG-20260518-WA0106.jpg"
         ],
         "images": [
             "images/2623(1).jpg",
-            "images/2623(2).jpg"
+            "images/2623(2).jpg",
+            "images/2623(3).jpg",
+            "images/2623(4).jpg",
+            "images/2623(5).jpg"
         ],
-        "image_count": 2
-    },
-    {
-        "tag": "2624",
-        "original_names": [
-            "IMG-20260518-WA0069.jpg",
-            "IMG-20260518-WA0086.jpg"
-        ],
-        "images": [
-            "images/2624(1).jpg",
-            "images/2624(2).jpg"
-        ],
-        "image_count": 2
+        "image_count": 5,
+        "price": "Nego"
     },
     {
         "tag": "2625",
@@ -361,7 +307,8 @@
             "images/2625(1).jpg",
             "images/2625(2).jpg"
         ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2626",
@@ -373,7 +320,8 @@
             "images/2626(1).jpg",
             "images/2626(2).jpg"
         ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2627",
@@ -385,7 +333,8 @@
             "images/2627(1).jpg",
             "images/2627(2).jpg"
         ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2628",
@@ -397,19 +346,8 @@
             "images/2628(1).jpg",
             "images/2628(2).jpg"
         ],
-        "image_count": 2
-    },
-    {
-        "tag": "2629",
-        "original_names": [
-            "IMG-20260518-WA0116.jpg",
-            "IMG-20260518-WA0119.jpg"
-        ],
-        "images": [
-            "images/2629(1).jpg",
-            "images/2629(2).jpg"
-        ],
-        "image_count": 2
+        "image_count": 2,
+        "price": "Nego"
     },
     {
         "tag": "2630",
@@ -419,17 +357,8 @@
         "images": [
             "images/2630(1).jpg"
         ],
-        "image_count": 1
-    },
-    {
-        "tag": "2631",
-        "original_names": [
-            "IMG-20260518-WA0033.jpg"
-        ],
-        "images": [
-            "images/2631(1).jpg"
-        ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2632",
@@ -439,7 +368,8 @@
         "images": [
             "images/2632(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2633",
@@ -449,17 +379,8 @@
         "images": [
             "images/2633(1).jpg"
         ],
-        "image_count": 1
-    },
-    {
-        "tag": "2634",
-        "original_names": [
-            "IMG-20260518-WA0056.jpg"
-        ],
-        "images": [
-            "images/2634(1).jpg"
-        ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2635",
@@ -469,17 +390,8 @@
         "images": [
             "images/2635(1).jpg"
         ],
-        "image_count": 1
-    },
-    {
-        "tag": "2636",
-        "original_names": [
-            "IMG-20260518-WA0064.jpg"
-        ],
-        "images": [
-            "images/2636(1).jpg"
-        ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2637",
@@ -489,7 +401,8 @@
         "images": [
             "images/2637(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2638",
@@ -499,7 +412,8 @@
         "images": [
             "images/2638(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2639",
@@ -509,7 +423,8 @@
         "images": [
             "images/2639(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2640",
@@ -519,17 +434,8 @@
         "images": [
             "images/2640(1).jpg"
         ],
-        "image_count": 1
-    },
-    {
-        "tag": "2641",
-        "original_names": [
-            "IMG-20260518-WA0089.jpg"
-        ],
-        "images": [
-            "images/2641(1).jpg"
-        ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2642",
@@ -539,7 +445,8 @@
         "images": [
             "images/2642(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2643",
@@ -549,7 +456,8 @@
         "images": [
             "images/2643(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2644",
@@ -559,27 +467,8 @@
         "images": [
             "images/2644(1).jpg"
         ],
-        "image_count": 1
-    },
-    {
-        "tag": "2645",
-        "original_names": [
-            "IMG-20260518-WA0101.jpg"
-        ],
-        "images": [
-            "images/2645(1).jpg"
-        ],
-        "image_count": 1
-    },
-    {
-        "tag": "2646",
-        "original_names": [
-            "IMG-20260518-WA0106.jpg"
-        ],
-        "images": [
-            "images/2646(1).jpg"
-        ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2647",
@@ -589,7 +478,8 @@
         "images": [
             "images/2647(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2648",
@@ -599,7 +489,8 @@
         "images": [
             "images/2648(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2649",
@@ -609,7 +500,8 @@
         "images": [
             "images/2649(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Tk 140,000"
     },
     {
         "tag": "2650",
@@ -619,7 +511,8 @@
         "images": [
             "images/2650(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     },
     {
         "tag": "2651",
@@ -629,6 +522,7 @@
         "images": [
             "images/2651(1).jpg"
         ],
-        "image_count": 1
+        "image_count": 1,
+        "price": "Nego"
     }
 ]
