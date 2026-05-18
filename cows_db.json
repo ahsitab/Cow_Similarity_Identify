@@ -268,14 +268,16 @@
     {
         "tag": "2617",
         "original_names": [
+            "2617.jpeg",
             "IMG-20260516-WA0012.jpg",
             "IMG-20260518-WA0104.jpg"
         ],
         "images": [
             "images/2617(1).jpg",
-            "images/2617(2).jpg"
+            "images/2617(2).jpg",
+            "images/2617(3).jpg"
         ],
-        "image_count": 2,
+        "image_count": 3,
         "price": "Nego",
         "status": "available",
         "weight": "TBA"
