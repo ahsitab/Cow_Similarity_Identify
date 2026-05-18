@@ -12,14 +12,14 @@ const COWS_DATA = [
             "IMG-20260518-WA0096.jpg"
         ],
         "images": [
-            "2601(1).jpg",
-            "2601(2).jpg",
-            "2601(3).jpg",
-            "2601(4).jpg",
-            "2601(5).jpg",
-            "2601(6).jpg",
-            "2601(7).jpg",
-            "2601(8).jpg"
+            "images/2601(1).jpg",
+            "images/2601(2).jpg",
+            "images/2601(3).jpg",
+            "images/2601(4).jpg",
+            "images/2601(5).jpg",
+            "images/2601(6).jpg",
+            "images/2601(7).jpg",
+            "images/2601(8).jpg"
         ],
         "image_count": 8
     },
@@ -34,12 +34,12 @@ const COWS_DATA = [
             "IMG-20260518-WA0137.jpg"
         ],
         "images": [
-            "2602(1).jpg",
-            "2602(2).jpg",
-            "2602(3).jpg",
-            "2602(4).jpg",
-            "2602(5).jpg",
-            "2602(6).jpg"
+            "images/2602(1).jpg",
+            "images/2602(2).jpg",
+            "images/2602(3).jpg",
+            "images/2602(4).jpg",
+            "images/2602(5).jpg",
+            "images/2602(6).jpg"
         ],
         "image_count": 6
     },
@@ -54,12 +54,12 @@ const COWS_DATA = [
             "IMG-20260518-WA0081.jpg"
         ],
         "images": [
-            "2603(1).jpg",
-            "2603(2).jpg",
-            "2603(3).jpg",
-            "2603(4).jpg",
-            "2603(5).jpg",
-            "2603(6).jpg"
+            "images/2603(1).jpg",
+            "images/2603(2).jpg",
+            "images/2603(3).jpg",
+            "images/2603(4).jpg",
+            "images/2603(5).jpg",
+            "images/2603(6).jpg"
         ],
         "image_count": 6
     },
@@ -73,11 +73,11 @@ const COWS_DATA = [
             "IMG-20260518-WA0105.jpg"
         ],
         "images": [
-            "2604(1).jpg",
-            "2604(2).jpg",
-            "2604(3).jpg",
-            "2604(4).jpg",
-            "2604(5).jpg"
+            "images/2604(1).jpg",
+            "images/2604(2).jpg",
+            "images/2604(3).jpg",
+            "images/2604(4).jpg",
+            "images/2604(5).jpg"
         ],
         "image_count": 5
     },
@@ -91,11 +91,11 @@ const COWS_DATA = [
             "IMG-20260518-WA0125.jpg"
         ],
         "images": [
-            "2605(1).jpg",
-            "2605(2).jpg",
-            "2605(3).jpg",
-            "2605(4).jpg",
-            "2605(5).jpg"
+            "images/2605(1).jpg",
+            "images/2605(2).jpg",
+            "images/2605(3).jpg",
+            "images/2605(4).jpg",
+            "images/2605(5).jpg"
         ],
         "image_count": 5
     },
@@ -108,10 +108,10 @@ const COWS_DATA = [
             "IMG-20260518-WA0135.jpg"
         ],
         "images": [
-            "2606(1).jpg",
-            "2606(2).jpg",
-            "2606(3).jpg",
-            "2606(4).jpg"
+            "images/2606(1).jpg",
+            "images/2606(2).jpg",
+            "images/2606(3).jpg",
+            "images/2606(4).jpg"
         ],
         "image_count": 4
     },
@@ -124,10 +124,10 @@ const COWS_DATA = [
             "IMG-20260518-WA0136.jpg"
         ],
         "images": [
-            "2607(1).jpg",
-            "2607(2).jpg",
-            "2607(3).jpg",
-            "2607(4).jpg"
+            "images/2607(1).jpg",
+            "images/2607(2).jpg",
+            "images/2607(3).jpg",
+            "images/2607(4).jpg"
         ],
         "image_count": 4
     },
@@ -140,10 +140,10 @@ const COWS_DATA = [
             "IMG-20260518-WA0120.jpg"
         ],
         "images": [
-            "2608(1).jpg",
-            "2608(2).jpg",
-            "2608(3).jpg",
-            "2608(4).jpg"
+            "images/2608(1).jpg",
+            "images/2608(2).jpg",
+            "images/2608(3).jpg",
+            "images/2608(4).jpg"
         ],
         "image_count": 4
     },
@@ -155,9 +155,9 @@ const COWS_DATA = [
             "IMG-20260518-WA0098.jpg"
         ],
         "images": [
-            "2609(1).jpg",
-            "2609(2).jpg",
-            "2609(3).jpg"
+            "images/2609(1).jpg",
+            "images/2609(2).jpg",
+            "images/2609(3).jpg"
         ],
         "image_count": 3
     },
@@ -169,9 +169,9 @@ const COWS_DATA = [
             "IMG-20260518-WA0112.jpg"
         ],
         "images": [
-            "2610(1).jpg",
-            "2610(2).jpg",
-            "2610(3).jpg"
+            "images/2610(1).jpg",
+            "images/2610(2).jpg",
+            "images/2610(3).jpg"
         ],
         "image_count": 3
     },
@@ -183,9 +183,9 @@ const COWS_DATA = [
             "IMG-20260518-WA0123.jpg"
         ],
         "images": [
-            "2611(1).jpg",
-            "2611(2).jpg",
-            "2611(3).jpg"
+            "images/2611(1).jpg",
+            "images/2611(2).jpg",
+            "images/2611(3).jpg"
         ],
         "image_count": 3
     },
@@ -197,9 +197,9 @@ const COWS_DATA = [
             "IMG-20260518-WA0111.jpg"
         ],
         "images": [
-            "2612(1).jpg",
-            "2612(2).jpg",
-            "2612(3).jpg"
+            "images/2612(1).jpg",
+            "images/2612(2).jpg",
+            "images/2612(3).jpg"
         ],
         "image_count": 3
     },
@@ -211,9 +211,9 @@ const COWS_DATA = [
             "IMG-20260518-WA0114.jpg"
         ],
         "images": [
-            "2613(1).jpg",
-            "2613(2).jpg",
-            "2613(3).jpg"
+            "images/2613(1).jpg",
+            "images/2613(2).jpg",
+            "images/2613(3).jpg"
         ],
         "image_count": 3
     },
@@ -225,9 +225,9 @@ const COWS_DATA = [
             "IMG-20260518-WA0121.jpg"
         ],
         "images": [
-            "2614(1).jpg",
-            "2614(2).jpg",
-            "2614(3).jpg"
+            "images/2614(1).jpg",
+            "images/2614(2).jpg",
+            "images/2614(3).jpg"
         ],
         "image_count": 3
     },
@@ -238,8 +238,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0040.jpg"
         ],
         "images": [
-            "2615(1).jpeg",
-            "2615(2).jpg"
+            "images/2615(1).jpeg",
+            "images/2615(2).jpg"
         ],
         "image_count": 2
     },
@@ -250,8 +250,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0091.jpg"
         ],
         "images": [
-            "2616(1).jpeg",
-            "2616(2).jpg"
+            "images/2616(1).jpeg",
+            "images/2616(2).jpg"
         ],
         "image_count": 2
     },
@@ -262,8 +262,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0104.jpg"
         ],
         "images": [
-            "2617(1).jpg",
-            "2617(2).jpg"
+            "images/2617(1).jpg",
+            "images/2617(2).jpg"
         ],
         "image_count": 2
     },
@@ -274,8 +274,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0035.jpg"
         ],
         "images": [
-            "2618(1).jpg",
-            "2618(2).jpg"
+            "images/2618(1).jpg",
+            "images/2618(2).jpg"
         ],
         "image_count": 2
     },
@@ -286,8 +286,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0117.jpg"
         ],
         "images": [
-            "2619(1).jpg",
-            "2619(2).jpg"
+            "images/2619(1).jpg",
+            "images/2619(2).jpg"
         ],
         "image_count": 2
     },
@@ -298,8 +298,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0079.jpg"
         ],
         "images": [
-            "2620(1).jpg",
-            "2620(2).jpg"
+            "images/2620(1).jpg",
+            "images/2620(2).jpg"
         ],
         "image_count": 2
     },
@@ -310,8 +310,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0102.jpg"
         ],
         "images": [
-            "2621(1).jpg",
-            "2621(2).jpg"
+            "images/2621(1).jpg",
+            "images/2621(2).jpg"
         ],
         "image_count": 2
     },
@@ -322,8 +322,8 @@ const COWS_DATA = [
             "WhatsApp Image 2026-05-16 at 21.26.55.jpeg"
         ],
         "images": [
-            "2622(1).jpg",
-            "2622(2).jpeg"
+            "images/2622(1).jpg",
+            "images/2622(2).jpeg"
         ],
         "image_count": 2
     },
@@ -334,8 +334,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0068.jpg"
         ],
         "images": [
-            "2623(1).jpg",
-            "2623(2).jpg"
+            "images/2623(1).jpg",
+            "images/2623(2).jpg"
         ],
         "image_count": 2
     },
@@ -346,8 +346,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0086.jpg"
         ],
         "images": [
-            "2624(1).jpg",
-            "2624(2).jpg"
+            "images/2624(1).jpg",
+            "images/2624(2).jpg"
         ],
         "image_count": 2
     },
@@ -358,8 +358,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0138.jpg"
         ],
         "images": [
-            "2625(1).jpg",
-            "2625(2).jpg"
+            "images/2625(1).jpg",
+            "images/2625(2).jpg"
         ],
         "image_count": 2
     },
@@ -370,8 +370,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0110.jpg"
         ],
         "images": [
-            "2626(1).jpg",
-            "2626(2).jpg"
+            "images/2626(1).jpg",
+            "images/2626(2).jpg"
         ],
         "image_count": 2
     },
@@ -382,8 +382,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0124.jpg"
         ],
         "images": [
-            "2627(1).jpg",
-            "2627(2).jpg"
+            "images/2627(1).jpg",
+            "images/2627(2).jpg"
         ],
         "image_count": 2
     },
@@ -394,8 +394,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0126.jpg"
         ],
         "images": [
-            "2628(1).jpg",
-            "2628(2).jpg"
+            "images/2628(1).jpg",
+            "images/2628(2).jpg"
         ],
         "image_count": 2
     },
@@ -406,8 +406,8 @@ const COWS_DATA = [
             "IMG-20260518-WA0119.jpg"
         ],
         "images": [
-            "2629(1).jpg",
-            "2629(2).jpg"
+            "images/2629(1).jpg",
+            "images/2629(2).jpg"
         ],
         "image_count": 2
     },
@@ -417,7 +417,7 @@ const COWS_DATA = [
             "IMG-20260516-WA0030.jpg"
         ],
         "images": [
-            "2630(1).jpg"
+            "images/2630(1).jpg"
         ],
         "image_count": 1
     },
@@ -427,7 +427,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0033.jpg"
         ],
         "images": [
-            "2631(1).jpg"
+            "images/2631(1).jpg"
         ],
         "image_count": 1
     },
@@ -437,7 +437,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0041.jpg"
         ],
         "images": [
-            "2632(1).jpg"
+            "images/2632(1).jpg"
         ],
         "image_count": 1
     },
@@ -447,7 +447,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0044.jpg"
         ],
         "images": [
-            "2633(1).jpg"
+            "images/2633(1).jpg"
         ],
         "image_count": 1
     },
@@ -457,7 +457,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0056.jpg"
         ],
         "images": [
-            "2634(1).jpg"
+            "images/2634(1).jpg"
         ],
         "image_count": 1
     },
@@ -467,7 +467,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0060.jpg"
         ],
         "images": [
-            "2635(1).jpg"
+            "images/2635(1).jpg"
         ],
         "image_count": 1
     },
@@ -477,7 +477,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0064.jpg"
         ],
         "images": [
-            "2636(1).jpg"
+            "images/2636(1).jpg"
         ],
         "image_count": 1
     },
@@ -487,7 +487,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0067.jpg"
         ],
         "images": [
-            "2637(1).jpg"
+            "images/2637(1).jpg"
         ],
         "image_count": 1
     },
@@ -497,7 +497,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0076.jpg"
         ],
         "images": [
-            "2638(1).jpg"
+            "images/2638(1).jpg"
         ],
         "image_count": 1
     },
@@ -507,7 +507,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0084.jpg"
         ],
         "images": [
-            "2639(1).jpg"
+            "images/2639(1).jpg"
         ],
         "image_count": 1
     },
@@ -517,7 +517,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0085.jpg"
         ],
         "images": [
-            "2640(1).jpg"
+            "images/2640(1).jpg"
         ],
         "image_count": 1
     },
@@ -527,7 +527,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0089.jpg"
         ],
         "images": [
-            "2641(1).jpg"
+            "images/2641(1).jpg"
         ],
         "image_count": 1
     },
@@ -537,7 +537,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0090.jpg"
         ],
         "images": [
-            "2642(1).jpg"
+            "images/2642(1).jpg"
         ],
         "image_count": 1
     },
@@ -547,7 +547,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0097.jpg"
         ],
         "images": [
-            "2643(1).jpg"
+            "images/2643(1).jpg"
         ],
         "image_count": 1
     },
@@ -557,7 +557,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0099.jpg"
         ],
         "images": [
-            "2644(1).jpg"
+            "images/2644(1).jpg"
         ],
         "image_count": 1
     },
@@ -567,7 +567,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0101.jpg"
         ],
         "images": [
-            "2645(1).jpg"
+            "images/2645(1).jpg"
         ],
         "image_count": 1
     },
@@ -577,7 +577,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0106.jpg"
         ],
         "images": [
-            "2646(1).jpg"
+            "images/2646(1).jpg"
         ],
         "image_count": 1
     },
@@ -587,7 +587,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0108.jpg"
         ],
         "images": [
-            "2647(1).jpg"
+            "images/2647(1).jpg"
         ],
         "image_count": 1
     },
@@ -597,7 +597,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0113.jpg"
         ],
         "images": [
-            "2648(1).jpg"
+            "images/2648(1).jpg"
         ],
         "image_count": 1
     },
@@ -607,7 +607,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0128.jpg"
         ],
         "images": [
-            "2649(1).jpg"
+            "images/2649(1).jpg"
         ],
         "image_count": 1
     },
@@ -617,7 +617,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0130.jpg"
         ],
         "images": [
-            "2650(1).jpg"
+            "images/2650(1).jpg"
         ],
         "image_count": 1
     },
@@ -627,7 +627,7 @@ const COWS_DATA = [
             "IMG-20260518-WA0131.jpg"
         ],
         "images": [
-            "2651(1).jpg"
+            "images/2651(1).jpg"
         ],
         "image_count": 1
     }

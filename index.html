@@ -18,10 +18,13 @@
                 <p>Visual Intelligence Cow Identification Database</p>
             </div>
         </div>
-        <div>
+        <div class="header-cta-group">
             <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 6px 14px; border-radius: 20px; color: #818cf8; font-weight: 600;">
                 Model: DinoV2 Unsupervised
             </span>
+            <a href="https://wa.me/8801712687383" target="_blank" class="contact-header-btn">
+                <span class="whatsapp-icon">💬</span> WhatsApp: 01712687383
+            </a>
         </div>
     </header>
 
@@ -136,6 +139,21 @@
                     </div>
                 </div>
 
+                <!-- Marketplace Info inside Modal -->
+                <div class="detail-section">
+                    <h3>Marketplace Specifications</h3>
+                    <div class="marketplace-row">
+                        <div class="market-badge market-badge-price" style="padding: 12px 10px;">
+                            <span class="market-badge-val" style="font-size: 1rem;">Nego</span>
+                            <span class="market-badge-label">Price Specification</span>
+                        </div>
+                        <div class="market-badge market-badge-weight" style="padding: 12px 10px;">
+                            <span class="market-badge-val" style="font-size: 1rem;">TBA</span>
+                            <span class="market-badge-label">Weight Specification</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Renaming Log Section -->
                 <div class="detail-section">
                     <h3>Renaming File Mappings</h3>
@@ -145,9 +163,8 @@
                 </div>
 
                 <!-- Footer Buttons inside Detail Modal -->
-                <div class="action-btn-row">
-                    <button class="btn btn-secondary" id="modal-close-btn-footer">Close Details</button>
-                    <button class="btn btn-primary" id="modal-open-fullscreen">Toggle Fullscreen</button>
+                <div class="action-btn-row" id="modal-action-buttons">
+                    <!-- Loaded Dynamically to include custom wa link -->
                 </div>
             </div>
         </div>
@@ -172,13 +189,12 @@
         const modalStatGroup = document.getElementById('modal-stat-group');
         const modalStatPhotos = document.getElementById('modal-stat-photos');
         const modalMappingList = document.getElementById('modal-mapping-list');
+        const modalActionButtons = document.getElementById('modal-action-buttons');
         
         const prevBtn = document.getElementById('prev-btn');
         const nextBtn = document.getElementById('next-btn');
         const modalThumbs = document.getElementById('modal-thumbs');
         const closeBtn = document.getElementById('modal-close-btn');
-        const closeBtnFooter = document.getElementById('modal-close-btn-footer');
-        const fullscreenBtn = document.getElementById('modal-open-fullscreen');
 
         // State
         let activeFilter = 'all';
@@ -272,8 +288,12 @@
                     miniThumbsHTML += `<div class="mini-thumb-more">+${cow.image_count - 3}</div>`;
                 }
 
+                // WhatsApp text pre-filled
+                const waMessage = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your portal.`);
+                const waLink = `https://wa.me/8801712687383?text=${waMessage}`;
+
                 card.innerHTML = `
-                    <div class="card-img-wrapper">
+                    <div class="card-img-wrapper" id="img-wrapper-${cow.tag}">
                         <img src="${cow.images[0]}" alt="Cow ${cow.tag}" class="card-img" loading="lazy">
                         <span class="${badgeClass}">${badgeText}</span>
                     </div>
@@ -283,13 +303,38 @@
                             <div class="meta-item"><span>Primary ID:</span> ${cow.images[0]}</div>
                             <div class="meta-item"><span>Original Name:</span> ${cow.original_names[0]}</div>
                         </div>
+                        
+                        <!-- Marketplace details -->
+                        <div class="marketplace-row">
+                            <div class="market-badge market-badge-price">
+                                <span class="market-badge-val">Nego</span>
+                                <span class="market-badge-label">Price</span>
+                            </div>
+                            <div class="market-badge market-badge-weight">
+                                <span class="market-badge-val">TBA</span>
+                                <span class="market-badge-label">Weight</span>
+                            </div>
+                        </div>
+
+                        <!-- WhatsApp Inquiry Button -->
+                        <a href="${waLink}" target="_blank" class="whatsapp-btn" id="wa-btn-${cow.tag}">
+                            <span class="whatsapp-icon">💬</span> Inquiry WhatsApp
+                        </a>
+
                         <div class="thumbnail-preview-row">
                             ${miniThumbsHTML}
                         </div>
                     </div>
                 `;
 
-                card.addEventListener('click', () => openCowModal(cow));
+                // Set event listeners cleanly (WhatsApp button stops propagation so it doesn't open the modal)
+                card.querySelector(`#img-wrapper-${cow.tag}`).addEventListener('click', () => openCowModal(cow));
+                card.querySelector('.card-info').addEventListener('click', (e) => {
+                    if (!e.target.closest('.whatsapp-btn')) {
+                        openCowModal(cow);
+                    }
+                });
+
                 grid.appendChild(card);
             });
         }
@@ -325,7 +370,6 @@
             };
 
             closeBtn.addEventListener('click', closeModal);
-            closeBtnFooter.addEventListener('click', closeModal);
             modal.addEventListener('click', (e) => {
                 if (e.target === modal) closeModal();
             });
@@ -339,17 +383,6 @@
             nextBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
                 navigateImage(1);
-            });
-
-            // Lightbox Fullscreen Toggle
-            fullscreenBtn.addEventListener('click', () => {
-                if (!document.fullscreenElement) {
-                    modalActiveImg.requestFullscreen().catch(err => {
-                        alert(`Error enabling full-screen mode: ${err.message}`);
-                    });
-                } else {
-                    document.exitFullscreen();
-                }
             });
 
             // Keyboard Navigation (Esc to close, left/right arrows to slide)
@@ -413,10 +446,27 @@
                 item.className = 'mapping-item';
                 item.innerHTML = `
                     <span class="old-name">${oldName}</span>
-                    <span style="color: var(--text-muted); font-size: 0.75rem;">➔</span>
+                    <span style="color: var(--text-muted); font-size: 0.8rem; margin: 0 5px;">➔</span>
                     <span class="new-name">${img}</span>
                 `;
                 modalMappingList.appendChild(item);
+            });
+
+            // Dynamically build action buttons to pass the correct tag message
+            const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your portal.`);
+            const waLinkModal = `https://wa.me/8801712687383?text=${waMessageModal}`;
+
+            modalActionButtons.innerHTML = `
+                <a href="${waLinkModal}" target="_blank" class="whatsapp-btn" style="padding: 14px; margin-bottom: 5px;">
+                    <span class="whatsapp-icon">💬</span> Contact Seller via WhatsApp
+                </a>
+                <button class="btn btn-secondary" id="modal-close-btn-footer">Close Details</button>
+            `;
+
+            // Bind click to the footer close button
+            document.getElementById('modal-close-btn-footer').addEventListener('click', () => {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
             });
 
             // Open Modal
@@ -446,7 +496,6 @@
             for (let i = 0; i < thumbs.length; i++) {
                 if (i === activeImgIdx) {
                     thumbs[i].classList.add('active');
-                    // Scroll active thumbnail into view
                     thumbs[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
                 } else {
                     thumbs[i].classList.remove('active');
