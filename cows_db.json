@@ -55,7 +55,10 @@
             "IMG-20260518-WA0042.jpg",
             "IMG-20260518-WA0059.jpg",
             "IMG-20260518-WA0070.jpg",
-            "IMG-20260518-WA0081.jpg"
+            "IMG-20260518-WA0081.jpg",
+            "IMG-20260518-WA0076.jpg",
+            "IMG-20260518-WA0097.jpg",
+            "IMG-20260518-WA0128.jpg"
         ],
         "images": [
             "images/2603(1).jpg",
@@ -63,9 +66,12 @@
             "images/2603(3).jpg",
             "images/2603(4).jpg",
             "images/2603(5).jpg",
-            "images/2603(6).jpg"
+            "images/2603(6).jpg",
+            "images/2603(7).jpg",
+            "images/2603(8).jpg",
+            "images/2603(9).jpg"
         ],
-        "image_count": 6,
+        "image_count": 9,
         "price": "Tk 340,000",
         "status": "available"
     },
@@ -422,18 +428,6 @@
         "status": "stock_out"
     },
     {
-        "tag": "2638",
-        "original_names": [
-            "IMG-20260518-WA0076.jpg"
-        ],
-        "images": [
-            "images/2638(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "available"
-    },
-    {
         "tag": "2639",
         "original_names": [
             "IMG-20260518-WA0084.jpg"
@@ -470,18 +464,6 @@
         "status": "available"
     },
     {
-        "tag": "2643",
-        "original_names": [
-            "IMG-20260518-WA0097.jpg"
-        ],
-        "images": [
-            "images/2643(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "available"
-    },
-    {
         "tag": "2647",
         "original_names": [
             "IMG-20260518-WA0108.jpg"
@@ -503,18 +485,6 @@
         ],
         "image_count": 1,
         "price": "Nego",
-        "status": "available"
-    },
-    {
-        "tag": "2649",
-        "original_names": [
-            "IMG-20260518-WA0128.jpg"
-        ],
-        "images": [
-            "images/2649(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Tk 140,000",
         "status": "available"
     },
     {

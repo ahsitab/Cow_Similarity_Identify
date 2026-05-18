@@ -38,17 +38,6 @@
         </div>
     </div>
 
-    <!-- Visual Analytics Stats Row -->
-    <section class="stats-container" id="stats-row">
-        <div class="stat-card">
-            <div class="stat-icon">🐄</div>
-            <div class="stat-info">
-                <span class="stat-value" id="stat-total-cows">0</span>
-                <span class="stat-label">Unique Cows</span>
-            </div>
-        </div>
-    </section>
-
     <!-- Control Panel -->
     <section class="control-panel">
         <div class="control-card">
@@ -56,13 +45,6 @@
             <div class="search-wrapper">
                 <span class="search-icon">🔍</span>
                 <input type="text" id="search-input" class="search-input" placeholder="Search by Cow Tag ID (e.g. 2601)...">
-            </div>
-
-            <!-- Filters -->
-            <div class="filters-wrapper">
-                <button class="filter-btn active" data-filter="all">All Cows</button>
-                <button class="filter-btn" data-filter="multi">Multiple Photos (2+)</button>
-                <button class="filter-btn" data-filter="single">Single Photo (1)</button>
             </div>
 
             <!-- Sorting -->
@@ -86,6 +68,9 @@
     <!-- Footer -->
     <footer class="app-footer">
         <p>&copy; 2026 Chuadanga Agro Cows-2026 | Visual Intelligence Catalog. All rights reserved.</p>
+        <p style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">
+            🛠️ This website is made by <strong style="color: var(--primary);">Asfer Hossain Sitab</strong>
+        </p>
     </footer>
 
     <!-- Interactive Detail Modal -->
@@ -159,7 +144,6 @@
         // DOM Elements
         const grid = document.getElementById('gallery-grid');
         const searchInput = document.getElementById('search-input');
-        const filterBtns = document.querySelectorAll('.filter-btn');
         const sortSelect = document.getElementById('sort-select');
         
         // Modal DOM Elements
@@ -177,7 +161,6 @@
         const closeBtn = document.getElementById('modal-close-btn');
 
         // State
-        let activeFilter = 'all';
         let searchQuery = '';
         let currentSort = 'tag-asc';
         let selectedCow = null;
@@ -185,15 +168,8 @@
 
         // Initialize App
         function init() {
-            calculateStats();
             renderGrid();
             setupEventListeners();
-        }
-
-        // Calculate visual statistics
-        function calculateStats() {
-            const totalCows = COWS_DATA.length;
-            document.getElementById('stat-total-cows').textContent = totalCows;
         }
 
         // Render Cards Grid
@@ -201,16 +177,7 @@
             grid.innerHTML = '';
             
             // Filter and Sort Data
-            let filteredCows = COWS_DATA.filter(cow => {
-                const matchesSearch = cow.tag.includes(searchQuery);
-                let matchesFilter = true;
-                if (activeFilter === 'multi') {
-                    matchesFilter = cow.image_count >= 2;
-                } else if (activeFilter === 'single') {
-                    matchesFilter = cow.image_count === 1;
-                }
-                return matchesSearch && matchesFilter;
-            });
+            let filteredCows = COWS_DATA.filter(cow => cow.tag.includes(searchQuery));
 
             // Sort
             filteredCows.sort((a, b) => {
@@ -245,7 +212,7 @@
                 // Determine Badge classes
                 const isMulti = cow.image_count >= 2;
                 const badgeText = isMulti ? `${cow.image_count} photos` : `1 photo`;
-                const badgeClass = isMulti ? 'badge-count' : 'badge-count badge-singleton';
+                const badgeClass = isMulti ? 'badge-count-inline' : 'badge-count-inline badge-singleton-inline';
 
                 // Miniature Preview images
                 let miniThumbsHTML = '';
@@ -301,11 +268,13 @@
                 card.innerHTML = `
                     <div class="card-img-wrapper" id="img-wrapper-${cow.tag}">
                         <img src="${cow.images[0]}" alt="Cow ${cow.tag}" class="card-img" loading="lazy">
-                        <span class="${badgeClass}">${badgeText}</span>
                         ${stockoutOverlay}
                     </div>
                     <div class="card-info">
-                        <h3 class="tag-label">Cow #${cow.tag}</h3>
+                        <div class="card-header-row">
+                            <h3 class="tag-label">Cow #${cow.tag}</h3>
+                            <span class="${badgeClass}">${badgeText}</span>
+                        </div>
                         
                         <!-- Marketplace details -->
                         <div class="marketplace-row">
@@ -345,16 +314,6 @@
             searchInput.addEventListener('input', (e) => {
                 searchQuery = e.target.value.trim();
                 renderGrid();
-            });
-
-            // Filter Buttons
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', (e) => {
-                    filterBtns.forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                    activeFilter = btn.dataset.filter;
-                    renderGrid();
-                });
             });
 
             // Sort Selector
