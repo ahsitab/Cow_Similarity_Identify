@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CowID Portal - Visual Intelligence Cow Database</title>
+    <meta name="description" content="A premium visual database and tracking system for clustered and identified cows using DinoV2 visual embeddings.">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="app-header">
+        <div class="logo-section">
+            <div class="logo-icon">🐄</div>
+            <div class="logo-text">
+                <h1>CowID Portal</h1>
+                <p>Visual Intelligence Cow Identification Database</p>
+            </div>
+        </div>
+        <div>
+            <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 6px 14px; border-radius: 20px; color: #818cf8; font-weight: 600;">
+                Model: DinoV2 Unsupervised
+            </span>
+        </div>
+    </header>
+
+    <!-- Visual Analytics Stats Row -->
+    <section class="stats-container" id="stats-row">
+        <div class="stat-card">
+            <div class="stat-icon">🐄</div>
+            <div class="stat-info">
+                <span class="stat-value" id="stat-total-cows">0</span>
+                <span class="stat-label">Unique Cows</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📸</div>
+            <div class="stat-info">
+                <span class="stat-value" id="stat-total-images">0</span>
+                <span class="stat-label">Total Images</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📊</div>
+            <div class="stat-info">
+                <span class="stat-value" id="stat-avg-images">0.0</span>
+                <span class="stat-label">Avg Photos / Cow</span>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">🔄</div>
+            <div class="stat-info">
+                <span class="stat-value" id="stat-multi-photos">0</span>
+                <span class="stat-label">Cows w/ Multi-Photos</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Control Panel -->
+    <section class="control-panel">
+        <div class="control-card">
+            <!-- Live Search -->
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" class="search-input" placeholder="Search by Cow Tag ID (e.g. 2601)...">
+            </div>
+
+            <!-- Filters -->
+            <div class="filters-wrapper">
+                <button class="filter-btn active" data-filter="all">All Cows</button>
+                <button class="filter-btn" data-filter="multi">Multiple Photos (2+)</button>
+                <button class="filter-btn" data-filter="single">Single Photo (1)</button>
+            </div>
+
+            <!-- Sorting -->
+            <div class="sort-wrapper">
+                <span class="sort-label">Sort by:</span>
+                <select id="sort-select" class="sort-select">
+                    <option value="tag-asc">Tag ID (Asc)</option>
+                    <option value="tag-desc">Tag ID (Desc)</option>
+                    <option value="count-desc">Photo Count (High → Low)</option>
+                    <option value="count-asc">Photo Count (Low → High)</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cow Cards Grid -->
+    <main class="gallery-grid" id="gallery-grid">
+        <!-- Rendered Dynamically via JS -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>&copy; 2026 CowID System | Dynamic Visual Database Dashboard. All rights reserved.</p>
+    </footer>
+
+    <!-- Interactive Detail Modal -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-container">
+            <!-- Modal Left: Interactive Viewer -->
+            <div class="modal-viewer">
+                <button class="nav-arrow arrow-left" id="prev-btn">◀</button>
+                <div class="active-image-wrapper">
+                    <img src="" alt="Active Cow" class="modal-active-img" id="modal-active-img">
+                </div>
+                <button class="nav-arrow arrow-right" id="next-btn">▶</button>
+                
+                <!-- Thumbnails Row -->
+                <div class="modal-thumbs-container">
+                    <div class="modal-thumbs" id="modal-thumbs">
+                        <!-- Loaded Dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Right: Metadata and Mapping Log -->
+            <div class="modal-details">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <h2 id="modal-tag-id">Cow 2601</h2>
+                        <span style="color: var(--primary); font-weight: 600; font-size: 0.9rem;" id="modal-image-count">8 images associated</span>
+                    </div>
+                    <button class="modal-close" id="modal-close-btn">&times;</button>
+                </div>
+
+                <div class="modal-stats">
+                    <div class="m-stat">
+                        <div class="m-stat-val" id="modal-stat-group">1</div>
+                        <div class="m-stat-label">Group ID</div>
+                    </div>
+                    <div class="m-stat">
+                        <div class="m-stat-val" id="modal-stat-photos">8</div>
+                        <div class="m-stat-label">Photos</div>
+                    </div>
+                </div>
+
+                <!-- Renaming Log Section -->
+                <div class="detail-section">
+                    <h3>Renaming File Mappings</h3>
+                    <ul class="mapping-list" id="modal-mapping-list">
+                        <!-- Loaded Dynamically -->
+                    </ul>
+                </div>
+
+                <!-- Footer Buttons inside Detail Modal -->
+                <div class="action-btn-row">
+                    <button class="btn btn-secondary" id="modal-close-btn-footer">Close Details</button>
+                    <button class="btn btn-primary" id="modal-open-fullscreen">Toggle Fullscreen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Import -->
+    <script src="cows_data.js"></script>
+
+    <!-- Application Script -->
+    <script>
+        // DOM Elements
+        const grid = document.getElementById('gallery-grid');
+        const searchInput = document.getElementById('search-input');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const sortSelect = document.getElementById('sort-select');
+        
+        // Modal DOM Elements
+        const modal = document.getElementById('modal-overlay');
+        const modalActiveImg = document.getElementById('modal-active-img');
+        const modalTagId = document.getElementById('modal-tag-id');
+        const modalImgCount = document.getElementById('modal-image-count');
+        const modalStatGroup = document.getElementById('modal-stat-group');
+        const modalStatPhotos = document.getElementById('modal-stat-photos');
+        const modalMappingList = document.getElementById('modal-mapping-list');
+        
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const modalThumbs = document.getElementById('modal-thumbs');
+        const closeBtn = document.getElementById('modal-close-btn');
+        const closeBtnFooter = document.getElementById('modal-close-btn-footer');
+        const fullscreenBtn = document.getElementById('modal-open-fullscreen');
+
+        // State
+        let activeFilter = 'all';
+        let searchQuery = '';
+        let currentSort = 'tag-asc';
+        let selectedCow = null;
+        let activeImgIdx = 0;
+
+        // Initialize App
+        function init() {
+            calculateStats();
+            renderGrid();
+            setupEventListeners();
+        }
+
+        // Calculate visual statistics
+        function calculateStats() {
+            const totalCows = COWS_DATA.length;
+            let totalImages = 0;
+            let multiPhotoCows = 0;
+
+            COWS_DATA.forEach(cow => {
+                totalImages += cow.image_count;
+                if (cow.image_count >= 2) {
+                    multiPhotoCows++;
+                }
+            });
+
+            document.getElementById('stat-total-cows').textContent = totalCows;
+            document.getElementById('stat-total-images').textContent = totalImages;
+            document.getElementById('stat-avg-images').textContent = (totalImages / totalCows).toFixed(1);
+            document.getElementById('stat-multi-photos').textContent = multiPhotoCows;
+        }
+
+        // Render Cards Grid
+        function renderGrid() {
+            grid.innerHTML = '';
+            
+            // Filter and Sort Data
+            let filteredCows = COWS_DATA.filter(cow => {
+                const matchesSearch = cow.tag.includes(searchQuery);
+                let matchesFilter = true;
+                if (activeFilter === 'multi') {
+                    matchesFilter = cow.image_count >= 2;
+                } else if (activeFilter === 'single') {
+                    matchesFilter = cow.image_count === 1;
+                }
+                return matchesSearch && matchesFilter;
+            });
+
+            // Sort
+            filteredCows.sort((a, b) => {
+                if (currentSort === 'tag-asc') return parseInt(a.tag) - parseInt(b.tag);
+                if (currentSort === 'tag-desc') return parseInt(b.tag) - parseInt(a.tag);
+                if (currentSort === 'count-desc') return b.image_count - a.image_count;
+                if (currentSort === 'count-asc') return a.image_count - b.image_count;
+                return 0;
+            });
+
+            // Handle Empty State
+            if (filteredCows.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">🔍</div>
+                        <h3>No cows found</h3>
+                        <p>We couldn't find any cows matching tag ID "${searchQuery}" under the selected filter.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Render Cards
+            filteredCows.forEach((cow, index) => {
+                const card = document.createElement('div');
+                card.className = 'cow-card';
+                card.style.animation = `fadeInUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards`;
+                card.style.animationDelay = `${index * 0.03}s`;
+                card.style.opacity = 0;
+
+                // Determine Badge classes
+                const isMulti = cow.image_count >= 2;
+                const badgeText = isMulti ? `${cow.image_count} photos` : `1 photo`;
+                const badgeClass = isMulti ? 'badge-count' : 'badge-count badge-singleton';
+
+                // Miniature Preview images
+                let miniThumbsHTML = '';
+                cow.images.slice(0, 3).forEach(img => {
+                    miniThumbsHTML += `<img src="${img}" class="mini-thumb" alt="thumbnail">`;
+                });
+                if (cow.image_count > 3) {
+                    miniThumbsHTML += `<div class="mini-thumb-more">+${cow.image_count - 3}</div>`;
+                }
+
+                card.innerHTML = `
+                    <div class="card-img-wrapper">
+                        <img src="${cow.images[0]}" alt="Cow ${cow.tag}" class="card-img" loading="lazy">
+                        <span class="${badgeClass}">${badgeText}</span>
+                    </div>
+                    <div class="card-info">
+                        <h3 class="tag-label">Cow #${cow.tag}</h3>
+                        <div class="card-metadata">
+                            <div class="meta-item"><span>Primary ID:</span> ${cow.images[0]}</div>
+                            <div class="meta-item"><span>Original Name:</span> ${cow.original_names[0]}</div>
+                        </div>
+                        <div class="thumbnail-preview-row">
+                            ${miniThumbsHTML}
+                        </div>
+                    </div>
+                `;
+
+                card.addEventListener('click', () => openCowModal(cow));
+                grid.appendChild(card);
+            });
+        }
+
+        // Set up Event Listeners
+        function setupEventListeners() {
+            // Live Search
+            searchInput.addEventListener('input', (e) => {
+                searchQuery = e.target.value.trim();
+                renderGrid();
+            });
+
+            // Filter Buttons
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    activeFilter = btn.dataset.filter;
+                    renderGrid();
+                });
+            });
+
+            // Sort Selector
+            sortSelect.addEventListener('change', (e) => {
+                currentSort = e.target.value;
+                renderGrid();
+            });
+
+            // Modal Interactions
+            const closeModal = () => {
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+            closeBtnFooter.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Previous/Next Buttons
+            prevBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateImage(-1);
+            });
+
+            nextBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navigateImage(1);
+            });
+
+            // Lightbox Fullscreen Toggle
+            fullscreenBtn.addEventListener('click', () => {
+                if (!document.fullscreenElement) {
+                    modalActiveImg.requestFullscreen().catch(err => {
+                        alert(`Error enabling full-screen mode: ${err.message}`);
+                    });
+                } else {
+                    document.exitFullscreen();
+                }
+            });
+
+            // Keyboard Navigation (Esc to close, left/right arrows to slide)
+            document.addEventListener('keydown', (e) => {
+                if (!modal.classList.contains('open')) return;
+                
+                if (e.key === 'Escape') {
+                    closeModal();
+                } else if (e.key === 'ArrowLeft') {
+                    navigateImage(-1);
+                } else if (e.key === 'ArrowRight') {
+                    navigateImage(1);
+                }
+            });
+        }
+
+        // Open Detail View Modal
+        function openCowModal(cow) {
+            selectedCow = cow;
+            activeImgIdx = 0;
+            
+            // Set Modal Details
+            modalTagId.textContent = `Cow Tag: ${cow.tag}`;
+            modalImgCount.textContent = `${cow.image_count} photos identified`;
+            modalStatGroup.textContent = cow.tag;
+            modalStatPhotos.textContent = cow.image_count;
+            
+            // Render Image Viewer
+            updateActiveImage();
+            
+            // Render Thumbnails
+            modalThumbs.innerHTML = '';
+            cow.images.forEach((img, idx) => {
+                const thumb = document.createElement('img');
+                thumb.className = 'modal-thumb' + (idx === 0 ? ' active' : '');
+                thumb.src = img;
+                thumb.alt = `Thumbnail ${idx + 1}`;
+                thumb.addEventListener('click', () => {
+                    activeImgIdx = idx;
+                    updateActiveImage();
+                });
+                modalThumbs.appendChild(thumb);
+            });
+
+            // Hide navigation arrows if there is only 1 image
+            if (cow.image_count <= 1) {
+                prevBtn.style.display = 'none';
+                nextBtn.style.display = 'none';
+                modalThumbs.style.display = 'none';
+            } else {
+                prevBtn.style.display = 'flex';
+                nextBtn.style.display = 'flex';
+                modalThumbs.style.display = 'flex';
+            }
+
+            // Render Mapping List
+            modalMappingList.innerHTML = '';
+            cow.images.forEach((img, idx) => {
+                const oldName = cow.original_names[idx];
+                const item = document.createElement('li');
+                item.className = 'mapping-item';
+                item.innerHTML = `
+                    <span class="old-name">${oldName}</span>
+                    <span style="color: var(--text-muted); font-size: 0.75rem;">➔</span>
+                    <span class="new-name">${img}</span>
+                `;
+                modalMappingList.appendChild(item);
+            });
+
+            // Open Modal
+            modal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Slide Images in Modal Viewer
+        function navigateImage(direction) {
+            if (!selectedCow) return;
+            activeImgIdx = (activeImgIdx + direction + selectedCow.image_count) % selectedCow.image_count;
+            updateActiveImage();
+        }
+
+        // Update active image and thumbnail outlines
+        function updateActiveImage() {
+            if (!selectedCow) return;
+            const activeImgSrc = selectedCow.images[activeImgIdx];
+            modalActiveImg.style.opacity = 0.3;
+            setTimeout(() => {
+                modalActiveImg.src = activeImgSrc;
+                modalActiveImg.style.opacity = 1;
+            }, 50);
+
+            // Set active thumbnail
+            const thumbs = modalThumbs.children;
+            for (let i = 0; i < thumbs.length; i++) {
+                if (i === activeImgIdx) {
+                    thumbs[i].classList.add('active');
+                    // Scroll active thumbnail into view
+                    thumbs[i].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+                } else {
+                    thumbs[i].classList.remove('active');
+                }
+            }
+        }
+
+        // Inject Dynamic Keyframe Animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Start
+        window.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>
