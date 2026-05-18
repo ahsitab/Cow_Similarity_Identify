@@ -459,9 +459,9 @@ const COWS_DATA = [
             "2651.jpeg",
             "2651(1).jpeg"
         ],
-        "price": "Nego",
+        "price": "Tk 135000/",
         "status": "available",
-        "weight": "TBA"
+        "weight": "245 kg"
     },
     {
         "tag": "2652",
@@ -472,9 +472,9 @@ const COWS_DATA = [
         "original_names": [
             "2652.jpeg"
         ],
-        "price": "Nego",
+        "price": "Tk 130000/",
         "status": "available",
-        "weight": "TBA"
+        "weight": "240 kg"
     },
     {
         "tag": "2653",
@@ -485,9 +485,9 @@ const COWS_DATA = [
         "original_names": [
             "2653.jpeg"
         ],
-        "price": "Nego",
+        "price": "Tk 135000/",
         "status": "available",
-        "weight": "TBA"
+        "weight": "235 kg"
     },
     {
         "tag": "2657",
@@ -500,8 +500,8 @@ const COWS_DATA = [
             "2657.jpeg",
             "2657(1).jpeg"
         ],
-        "price": "Nego",
+        "price": "Tk 145000/",
         "status": "available",
-        "weight": "TBA"
+        "weight": "255 kg"
     }
 ];
