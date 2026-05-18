@@ -22,8 +22,11 @@
             <a href="tel:01712687383" class="contact-header-btn" style="background: rgba(21, 128, 61, 0.08); border-color: rgba(21, 128, 61, 0.25); color: var(--primary);">
                 <span class="whatsapp-icon">📞</span> Call: 01712687383
             </a>
-            <a href="https://wa.me/8801712687383" target="_blank" class="contact-header-btn">
-                <span class="whatsapp-icon">💬</span> WhatsApp: 01712687383
+            <a href="https://wa.me/8801981532123" target="_blank" class="contact-header-btn" style="background: rgba(37, 211, 102, 0.08); border-color: rgba(37, 211, 102, 0.25); color: #166534;">
+                <span class="whatsapp-icon">💬</span> WhatsApp: 01981532123
+            </a>
+            <a href="https://www.facebook.com/ChuadangaAgro" target="_blank" class="contact-header-btn facebook-header-btn">
+                <span class="whatsapp-icon">👥</span> Facebook Page
             </a>
         </div>
     </header>
@@ -33,7 +36,7 @@
         <div class="ticker-label">🔥 BREAKING NEWS</div>
         <div class="ticker-content-wrapper">
             <div class="ticker-scroll-text">
-                🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP NOW! 🐄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP NOW! 🐄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP NOW! 🐄
+                🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP 01981532123 NOW! FOLLOW OUR FACEBOOK: facebook.com/ChuadangaAgro 🐄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP 01981532123 NOW! FOLLOW OUR FACEBOOK: facebook.com/ChuadangaAgro 🐄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP 01981532123 NOW! FOLLOW OUR FACEBOOK: facebook.com/ChuadangaAgro 🐄
             </div>
         </div>
     </div>
@@ -68,6 +71,11 @@
     <!-- Footer -->
     <footer class="app-footer">
         <p>&copy; 2026 Chuadanga Agro Cows-2026 | Visual Intelligence Catalog. All rights reserved.</p>
+        <p style="margin-top: 6px;">
+            <a href="https://www.facebook.com/ChuadangaAgro" target="_blank" style="color: #1877f2; text-decoration: none; font-weight: 600; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 4px;">
+                👥 Follow us on Facebook: facebook.com/ChuadangaAgro
+            </a>
+        </p>
         <p style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted);">
             🛠️ This website is made by <strong style="color: var(--primary);">Asfer Hossain Sitab</strong>
         </p>
@@ -122,7 +130,7 @@
                             <span class="market-badge-label">Price Specification</span>
                         </div>
                         <div class="market-badge market-badge-weight" style="padding: 12px 10px;">
-                            <span class="market-badge-val" style="font-size: 1rem;">TBA</span>
+                            <span class="market-badge-val" style="font-size: 1rem;" id="modal-weight-val">TBA</span>
                             <span class="market-badge-label">Weight Specification</span>
                         </div>
                     </div>
@@ -225,7 +233,7 @@
 
                 // WhatsApp text pre-filled
                 const waMessage = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
-                const waLink = `https://wa.me/8801712687383?text=${waMessage}`;
+                const waLink = `https://wa.me/8801981532123?text=${waMessage}`;
 
                 // Price badge template
                 let priceBadgeHTML = '';
@@ -280,7 +288,7 @@
                         <div class="marketplace-row">
                             ${priceBadgeHTML}
                             <div class="market-badge market-badge-weight">
-                                <span class="market-badge-val">TBA</span>
+                                <span class="market-badge-val">${cow.weight || "TBA"}</span>
                                 <span class="market-badge-label">Weight</span>
                             </div>
                         </div>
@@ -371,7 +379,7 @@
             
             const isStockOut = cow.status === "stock_out";
             
-            // Set price badge value
+            // Set price & weight badge values
             if (isStockOut) {
                 document.getElementById('modal-price-val').textContent = "Stock Out";
                 document.getElementById('modal-price-val').parentElement.classList.add('market-badge-stockout');
@@ -379,6 +387,7 @@
                 document.getElementById('modal-price-val').textContent = cow.price || "Nego";
                 document.getElementById('modal-price-val').parentElement.classList.remove('market-badge-stockout');
             }
+            document.getElementById('modal-weight-val').textContent = cow.weight || "TBA";
             
             // Render Image Viewer
             updateActiveImage();
@@ -420,12 +429,12 @@
                 `;
             } else {
                 const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
-                const waLinkModal = `https://wa.me/8801712687383?text=${waMessageModal}`;
-
+                const waLinkModal = `https://wa.me/8801981532123?text=${waMessageModal}`;
+ 
                 modalActionButtons.innerHTML = `
                     <div class="modal-actions-row">
                         <a href="${waLinkModal}" target="_blank" class="btn-wa-lg">
-                            <span class="whatsapp-icon">💬</span> Inquiry via WhatsApp (01712687383)
+                            <span class="whatsapp-icon">💬</span> Inquiry via WhatsApp (01981532123)
                         </a>
                         <a href="tel:01712687383" class="btn-call-lg">
                             <span class="whatsapp-icon">📞</span> Call Now: 01712687383

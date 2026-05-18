@@ -103,6 +103,19 @@ body {
     transform: translateY(-2px);
 }
 
+.facebook-header-btn {
+    background: rgba(24, 119, 242, 0.08);
+    border: 1px solid rgba(24, 119, 242, 0.25);
+    color: #1877f2;
+}
+
+.facebook-header-btn:hover {
+    background: #1877f2 !important;
+    color: white !important;
+    box-shadow: 0 4px 15px rgba(24, 119, 242, 0.25) !important;
+    transform: translateY(-2px);
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
