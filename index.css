@@ -113,9 +113,13 @@ body {
     max-width: 1400px;
     margin: 0 auto 30px auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.stats-container .stat-card {
+    max-width: 350px;
+    width: 100%;
 }
 
 .stat-card {
@@ -892,8 +896,8 @@ body {
     }
     
     .stats-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        display: flex;
+        justify-content: center;
         padding: 0 15px;
     }
     
@@ -1044,7 +1048,8 @@ body {
 
 @media (max-width: 400px) {
     .stats-container {
-        grid-template-columns: 1fr;
+        display: flex;
+        justify-content: center;
     }
     
     .filters-wrapper {
@@ -1055,4 +1060,125 @@ body {
     .filter-btn {
         width: 100%;
     }
+}
+
+/* ==========================================================================
+   📺 DYNAMIC TV NEWS TICKER & STOCK OUT BADGES
+   ========================================================================== */
+
+/* TV News Ticker Banner */
+.news-ticker-container {
+    max-width: 1400px;
+    margin: 0 auto 25px auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: #ffe4e6; /* Soft red backdrop */
+    border: 2px solid #ef4444; /* Bright Red border */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.08);
+}
+
+.ticker-label {
+    background: #ef4444; /* Solid Bright Red */
+    color: white;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    animation: flash 1.5s infinite;
+}
+
+.ticker-content-wrapper {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.ticker-scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #b91c1c; /* Deep Red color */
+    padding-left: 100%;
+    animation: ticker-scroll 22s linear infinite;
+}
+
+@keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+@keyframes flash {
+    0%, 100% { background: #ef4444; }
+    50% { background: #b91c1c; }
+}
+
+/* Stock Out Styles */
+.cow-card.stock-out {
+    opacity: 0.82;
+    border-color: rgba(239, 68, 68, 0.2);
+    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.03);
+}
+
+.cow-card.stock-out:hover {
+    transform: translateY(-4px); /* Smaller lift for sold cards */
+    border-color: rgba(239, 68, 68, 0.4);
+    box-shadow: 0 8px 25px rgba(239, 68, 68, 0.08);
+}
+
+.badge-stockout {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #ef4444; /* Solid Red */
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(239, 68, 68, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.market-badge-stockout {
+    border-color: rgba(239, 68, 68, 0.3) !important;
+    background: rgba(239, 68, 68, 0.05) !important;
+}
+
+.market-badge-stockout .market-badge-val {
+    color: #ef4444 !important;
+}
+
+/* Stock Out Button Styling */
+.btn-stockout {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    background: #e2e8f0 !important; /* Soft slate gray */
+    color: #64748b !important; /* Slate 500 gray text */
+    border: 1px solid #cbd5e1 !important;
+    text-align: center;
+    cursor: not-allowed;
+    pointer-events: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: none !important;
 }

@@ -28,6 +28,16 @@
         </div>
     </header>
 
+    <!-- TV News Ticker Banner -->
+    <div class="news-ticker-container">
+        <div class="ticker-label">🔥 BREAKING NEWS</div>
+        <div class="ticker-content-wrapper">
+            <div class="ticker-scroll-text">
+                🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP NOW! 🐄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP NOW! 🐄 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 🔴 CHUADANGA AGRO HAS 40+ PREMIUM COWS FOR THIS SEASON! BOOK YOUR COW TODAY! CALL 01712687383 OR WHATSAPP NOW! 🐄
+            </div>
+        </div>
+    </div>
+
     <!-- Visual Analytics Stats Row -->
     <section class="stats-container" id="stats-row">
         <div class="stat-card">
@@ -35,27 +45,6 @@
             <div class="stat-info">
                 <span class="stat-value" id="stat-total-cows">0</span>
                 <span class="stat-label">Unique Cows</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon">📸</div>
-            <div class="stat-info">
-                <span class="stat-value" id="stat-total-images">0</span>
-                <span class="stat-label">Total Images</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon">📊</div>
-            <div class="stat-info">
-                <span class="stat-value" id="stat-avg-images">0.0</span>
-                <span class="stat-label">Avg Photos / Cow</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon">🔄</div>
-            <div class="stat-info">
-                <span class="stat-value" id="stat-multi-photos">0</span>
-                <span class="stat-label">Cows w/ Multi-Photos</span>
             </div>
         </div>
     </section>
@@ -204,20 +193,7 @@
         // Calculate visual statistics
         function calculateStats() {
             const totalCows = COWS_DATA.length;
-            let totalImages = 0;
-            let multiPhotoCows = 0;
-
-            COWS_DATA.forEach(cow => {
-                totalImages += cow.image_count;
-                if (cow.image_count >= 2) {
-                    multiPhotoCows++;
-                }
-            });
-
             document.getElementById('stat-total-cows').textContent = totalCows;
-            document.getElementById('stat-total-images').textContent = totalImages;
-            document.getElementById('stat-avg-images').textContent = (totalImages / totalCows).toFixed(1);
-            document.getElementById('stat-multi-photos').textContent = multiPhotoCows;
         }
 
         // Render Cards Grid
@@ -260,7 +236,8 @@
             // Render Cards
             filteredCows.forEach((cow, index) => {
                 const card = document.createElement('div');
-                card.className = 'cow-card';
+                const isStockOut = cow.status === "stock_out";
+                card.className = isStockOut ? 'cow-card stock-out' : 'cow-card';
                 card.style.animation = `fadeInUp 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards`;
                 card.style.animationDelay = `${index * 0.03}s`;
                 card.style.opacity = 0;
@@ -283,24 +260,56 @@
                 const waMessage = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
                 const waLink = `https://wa.me/8801712687383?text=${waMessage}`;
 
+                // Price badge template
+                let priceBadgeHTML = '';
+                if (isStockOut) {
+                    priceBadgeHTML = `
+                        <div class="market-badge market-badge-price market-badge-stockout">
+                            <span class="market-badge-val">Stock Out</span>
+                            <span class="market-badge-label">Status</span>
+                        </div>
+                    `;
+                } else {
+                    priceBadgeHTML = `
+                        <div class="market-badge market-badge-price">
+                            <span class="market-badge-val">${cow.price || "Nego"}</span>
+                            <span class="market-badge-label">Price</span>
+                        </div>
+                    `;
+                }
+
+                // Action buttons template
+                let actionsHTML = '';
+                if (isStockOut) {
+                    actionsHTML = `
+                        <span class="btn-stockout">❌ Stock Out</span>
+                    `;
+                } else {
+                    actionsHTML = `
+                        <a href="${waLink}" target="_blank" class="btn-wa" id="wa-btn-${cow.tag}">
+                            <span class="whatsapp-icon">💬</span> WhatsApp
+                        </a>
+                        <a href="tel:01712687383" class="btn-call" id="call-btn-${cow.tag}">
+                            <span class="whatsapp-icon">📞</span> Call Now
+                        </a>
+                    `;
+                }
+
+                // Overlay badge
+                const stockoutOverlay = isStockOut ? `<span class="badge-stockout">❌ Stock Out</span>` : '';
+
                 card.innerHTML = `
                     <div class="card-img-wrapper" id="img-wrapper-${cow.tag}">
                         <img src="${cow.images[0]}" alt="Cow ${cow.tag}" class="card-img" loading="lazy">
                         <span class="${badgeClass}">${badgeText}</span>
+                        ${stockoutOverlay}
                     </div>
                     <div class="card-info">
                         <h3 class="tag-label">Cow #${cow.tag}</h3>
-                        <div class="card-metadata">
-                            <div class="meta-item"><span>Primary ID:</span> ${cow.images[0]}</div>
-                            <div class="meta-item"><span>Original Name:</span> ${cow.original_names[0]}</div>
-                        </div>
                         
                         <!-- Marketplace details -->
                         <div class="marketplace-row">
-                            <div class="market-badge market-badge-price">
-                                <span class="market-badge-val">${cow.price || "Nego"}</span>
-                                <span class="market-badge-label">Price</span>
-                            </div>
+                            ${priceBadgeHTML}
                             <div class="market-badge market-badge-weight">
                                 <span class="market-badge-val">TBA</span>
                                 <span class="market-badge-label">Weight</span>
@@ -309,12 +318,7 @@
 
                         <!-- Inquiry Actions Row -->
                         <div class="card-actions-row">
-                            <a href="${waLink}" target="_blank" class="btn-wa" id="wa-btn-${cow.tag}">
-                                <span class="whatsapp-icon">💬</span> WhatsApp
-                            </a>
-                            <a href="tel:01712687383" class="btn-call" id="call-btn-${cow.tag}">
-                                <span class="whatsapp-icon">📞</span> Call Now
-                            </a>
+                            ${actionsHTML}
                         </div>
 
                         <div class="thumbnail-preview-row">
@@ -405,7 +409,17 @@
             modalImgCount.textContent = `${cow.image_count} photos identified`;
             modalStatGroup.textContent = cow.tag;
             modalStatPhotos.textContent = cow.image_count;
-            document.getElementById('modal-price-val').textContent = cow.price || "Nego";
+            
+            const isStockOut = cow.status === "stock_out";
+            
+            // Set price badge value
+            if (isStockOut) {
+                document.getElementById('modal-price-val').textContent = "Stock Out";
+                document.getElementById('modal-price-val').parentElement.classList.add('market-badge-stockout');
+            } else {
+                document.getElementById('modal-price-val').textContent = cow.price || "Nego";
+                document.getElementById('modal-price-val').parentElement.classList.remove('market-badge-stockout');
+            }
             
             // Render Image Viewer
             updateActiveImage();
@@ -436,20 +450,31 @@
             }
 
             // Dynamically build action buttons to pass the correct tag message
-            const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
-            const waLinkModal = `https://wa.me/8801712687383?text=${waMessageModal}`;
+            if (isStockOut) {
+                modalActionButtons.innerHTML = `
+                    <div class="modal-actions-row">
+                        <span class="btn-stockout" style="padding: 14px; font-size: 0.95rem;">
+                            ❌ Stock Out (Sold)
+                        </span>
+                        <button class="btn btn-secondary" id="modal-close-btn-footer" style="padding: 14px; border-radius: 12px; margin-top: 5px;">Close Details</button>
+                    </div>
+                `;
+            } else {
+                const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
+                const waLinkModal = `https://wa.me/8801712687383?text=${waMessageModal}`;
 
-            modalActionButtons.innerHTML = `
-                <div class="modal-actions-row">
-                    <a href="${waLinkModal}" target="_blank" class="btn-wa-lg">
-                        <span class="whatsapp-icon">💬</span> Inquiry via WhatsApp (01712687383)
-                    </a>
-                    <a href="tel:01712687383" class="btn-call-lg">
-                        <span class="whatsapp-icon">📞</span> Call Now: 01712687383
-                    </a>
-                    <button class="btn btn-secondary" id="modal-close-btn-footer" style="padding: 14px; border-radius: 12px; margin-top: 5px;">Close Details</button>
-                </div>
-            `;
+                modalActionButtons.innerHTML = `
+                    <div class="modal-actions-row">
+                        <a href="${waLinkModal}" target="_blank" class="btn-wa-lg">
+                            <span class="whatsapp-icon">💬</span> Inquiry via WhatsApp (01712687383)
+                        </a>
+                        <a href="tel:01712687383" class="btn-call-lg">
+                            <span class="whatsapp-icon">📞</span> Call Now: 01712687383
+                        </a>
+                        <button class="btn btn-secondary" id="modal-close-btn-footer" style="padding: 14px; border-radius: 12px; margin-top: 5px;">Close Details</button>
+                    </div>
+                `;
+            }
 
             // Bind click to the footer close button
             document.getElementById('modal-close-btn-footer').addEventListener('click', () => {

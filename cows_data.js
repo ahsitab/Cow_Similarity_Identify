@@ -22,7 +22,8 @@ const COWS_DATA = [
             "images/2601(8).jpg"
         ],
         "image_count": 8,
-        "price": "Tk 360,000"
+        "price": "Tk 360,000",
+        "status": "available"
     },
     {
         "tag": "2602",
@@ -43,7 +44,8 @@ const COWS_DATA = [
             "images/2602(6).jpg"
         ],
         "image_count": 6,
-        "price": "Tk 275,000"
+        "price": "Tk 275,000",
+        "status": "available"
     },
     {
         "tag": "2603",
@@ -64,7 +66,8 @@ const COWS_DATA = [
             "images/2603(6).jpg"
         ],
         "image_count": 6,
-        "price": "Tk 340,000"
+        "price": "Tk 340,000",
+        "status": "available"
     },
     {
         "tag": "2604",
@@ -93,7 +96,8 @@ const COWS_DATA = [
             "images/2604(10).jpg"
         ],
         "image_count": 10,
-        "price": "Tk 470,000"
+        "price": "Tk 470,000",
+        "status": "available"
     },
     {
         "tag": "2605",
@@ -118,7 +122,8 @@ const COWS_DATA = [
             "images/2605(8).jpg"
         ],
         "image_count": 8,
-        "price": "Tk 530,000"
+        "price": "Tk 530,000",
+        "status": "available"
     },
     {
         "tag": "2606",
@@ -126,16 +131,25 @@ const COWS_DATA = [
             "IMG-20260516-WA0005.jpg",
             "IMG-20260518-WA0093.jpg",
             "IMG-20260518-WA0103.jpg",
-            "IMG-20260518-WA0135.jpg"
+            "IMG-20260518-WA0135.jpg",
+            "IMG-20260516-WA0029.jpg",
+            "IMG-20260518-WA0087.jpg",
+            "IMG-20260518-WA0098.jpg",
+            "IMG-20260518-WA0099.jpg"
         ],
         "images": [
             "images/2606(1).jpg",
             "images/2606(2).jpg",
             "images/2606(3).jpg",
-            "images/2606(4).jpg"
+            "images/2606(4).jpg",
+            "images/2606(5).jpg",
+            "images/2606(6).jpg",
+            "images/2606(7).jpg",
+            "images/2606(8).jpg"
         ],
-        "image_count": 4,
-        "price": "Tk 130,000"
+        "image_count": 8,
+        "price": "Tk 130,000",
+        "status": "available"
     },
     {
         "tag": "2607",
@@ -158,7 +172,8 @@ const COWS_DATA = [
             "images/2607(7).jpg"
         ],
         "image_count": 7,
-        "price": "Tk 160,000"
+        "price": "Tk 160,000",
+        "status": "available"
     },
     {
         "tag": "2608",
@@ -175,22 +190,8 @@ const COWS_DATA = [
             "images/2608(4).jpg"
         ],
         "image_count": 4,
-        "price": "Tk 150,000"
-    },
-    {
-        "tag": "2609",
-        "original_names": [
-            "IMG-20260516-WA0029.jpg",
-            "IMG-20260518-WA0087.jpg",
-            "IMG-20260518-WA0098.jpg"
-        ],
-        "images": [
-            "images/2609(1).jpg",
-            "images/2609(2).jpg",
-            "images/2609(3).jpg"
-        ],
-        "image_count": 3,
-        "price": "Nego"
+        "price": "Tk 150,000",
+        "status": "available"
     },
     {
         "tag": "2610",
@@ -205,7 +206,8 @@ const COWS_DATA = [
             "images/2610(3).jpg"
         ],
         "image_count": 3,
-        "price": "Tk 380,000"
+        "price": "Tk 380,000",
+        "status": "available"
     },
     {
         "tag": "2611",
@@ -224,7 +226,8 @@ const COWS_DATA = [
             "images/2611(5).jpg"
         ],
         "image_count": 5,
-        "price": "Tk 480,000"
+        "price": "Tk 480,000",
+        "status": "available"
     },
     {
         "tag": "2617",
@@ -237,7 +240,8 @@ const COWS_DATA = [
             "images/2617(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2618",
@@ -250,7 +254,8 @@ const COWS_DATA = [
             "images/2618(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "stock_out"
     },
     {
         "tag": "2619",
@@ -263,7 +268,8 @@ const COWS_DATA = [
             "images/2619(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "stock_out"
     },
     {
         "tag": "2621",
@@ -276,7 +282,8 @@ const COWS_DATA = [
             "images/2621(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2623",
@@ -295,7 +302,8 @@ const COWS_DATA = [
             "images/2623(5).jpg"
         ],
         "image_count": 5,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2625",
@@ -308,7 +316,8 @@ const COWS_DATA = [
             "images/2625(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2626",
@@ -321,7 +330,8 @@ const COWS_DATA = [
             "images/2626(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2627",
@@ -334,7 +344,8 @@ const COWS_DATA = [
             "images/2627(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2628",
@@ -347,7 +358,8 @@ const COWS_DATA = [
             "images/2628(2).jpg"
         ],
         "image_count": 2,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2630",
@@ -358,7 +370,8 @@ const COWS_DATA = [
             "images/2630(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2632",
@@ -369,7 +382,8 @@ const COWS_DATA = [
             "images/2632(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "stock_out"
     },
     {
         "tag": "2633",
@@ -380,7 +394,8 @@ const COWS_DATA = [
             "images/2633(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "stock_out"
     },
     {
         "tag": "2635",
@@ -391,7 +406,8 @@ const COWS_DATA = [
             "images/2635(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "stock_out"
     },
     {
         "tag": "2637",
@@ -402,7 +418,8 @@ const COWS_DATA = [
             "images/2637(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "stock_out"
     },
     {
         "tag": "2638",
@@ -413,7 +430,8 @@ const COWS_DATA = [
             "images/2638(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2639",
@@ -424,7 +442,8 @@ const COWS_DATA = [
             "images/2639(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2640",
@@ -435,7 +454,8 @@ const COWS_DATA = [
             "images/2640(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2642",
@@ -446,7 +466,8 @@ const COWS_DATA = [
             "images/2642(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2643",
@@ -457,18 +478,8 @@ const COWS_DATA = [
             "images/2643(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
-    },
-    {
-        "tag": "2644",
-        "original_names": [
-            "IMG-20260518-WA0099.jpg"
-        ],
-        "images": [
-            "images/2644(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2647",
@@ -479,7 +490,8 @@ const COWS_DATA = [
             "images/2647(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2648",
@@ -490,7 +502,8 @@ const COWS_DATA = [
             "images/2648(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2649",
@@ -501,7 +514,8 @@ const COWS_DATA = [
             "images/2649(1).jpg"
         ],
         "image_count": 1,
-        "price": "Tk 140,000"
+        "price": "Tk 140,000",
+        "status": "available"
     },
     {
         "tag": "2650",
@@ -512,7 +526,8 @@ const COWS_DATA = [
             "images/2650(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     },
     {
         "tag": "2651",
@@ -523,6 +538,7 @@ const COWS_DATA = [
             "images/2651(1).jpg"
         ],
         "image_count": 1,
-        "price": "Nego"
+        "price": "Nego",
+        "status": "available"
     }
 ];
