@@ -118,7 +118,7 @@
                 </div>
             </div>
 
-            <!-- Modal Right: Metadata and Mapping Log -->
+            <!-- Modal Right: Metadata and Actions -->
             <div class="modal-details">
                 <div class="modal-header">
                     <div class="modal-title">
@@ -154,14 +154,6 @@
                     </div>
                 </div>
 
-                <!-- Renaming Log Section -->
-                <div class="detail-section">
-                    <h3>Renaming File Mappings</h3>
-                    <ul class="mapping-list" id="modal-mapping-list">
-                        <!-- Loaded Dynamically -->
-                    </ul>
-                </div>
-
                 <!-- Footer Buttons inside Detail Modal -->
                 <div class="action-btn-row" id="modal-action-buttons">
                     <!-- Loaded Dynamically to include custom wa link -->
@@ -188,7 +180,6 @@
         const modalImgCount = document.getElementById('modal-image-count');
         const modalStatGroup = document.getElementById('modal-stat-group');
         const modalStatPhotos = document.getElementById('modal-stat-photos');
-        const modalMappingList = document.getElementById('modal-mapping-list');
         const modalActionButtons = document.getElementById('modal-action-buttons');
         
         const prevBtn = document.getElementById('prev-btn');
@@ -437,20 +428,6 @@
                 nextBtn.style.display = 'flex';
                 modalThumbs.style.display = 'flex';
             }
-
-            // Render Mapping List
-            modalMappingList.innerHTML = '';
-            cow.images.forEach((img, idx) => {
-                const oldName = cow.original_names[idx];
-                const item = document.createElement('li');
-                item.className = 'mapping-item';
-                item.innerHTML = `
-                    <span class="old-name">${oldName}</span>
-                    <span style="color: var(--text-muted); font-size: 0.8rem; margin: 0 5px;">➔</span>
-                    <span class="new-name">${img}</span>
-                `;
-                modalMappingList.appendChild(item);
-            });
 
             // Dynamically build action buttons to pass the correct tag message
             const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your portal.`);

@@ -722,37 +722,8 @@ body {
     letter-spacing: 0.5px;
 }
 
-.mapping-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.mapping-item {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 12px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 0.85rem;
-}
-
-.old-name {
-    color: var(--text-secondary);
-    font-family: monospace;
-}
-
-.new-name {
-    color: var(--success);
-    font-weight: 600;
-    font-family: monospace;
-}
-
 .action-btn-row {
-    margin-top: 20px;
+    margin-top: auto;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -887,7 +858,7 @@ body {
 
 @media (max-width: 600px) {
     body {
-        padding-bottom: 30px;
+        padding-bottom: 20px;
     }
     
     .control-card {
@@ -927,23 +898,33 @@ body {
         height: 200px;
     }
     
-    /* Modal optimizations for small phones */
+    /* Sleek full-screen modal layout on mobile phone screens */
     .modal-overlay {
-        padding: 10px;
+        padding: 0;
     }
     
     .modal-container {
-        border-radius: 20px;
-        max-height: 98vh;
+        border-radius: 0; /* Cover full mobile screen */
+        height: 100%;
+        max-height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column; /* Stack top-to-bottom */
+        overflow-y: auto;
     }
     
     .modal-viewer {
-        min-height: 250px;
+        background: #020408;
+        min-height: 320px; /* Comfortable mobile viewer height */
         padding: 15px;
+        flex-shrink: 0; /* Keep viewer size fixed */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
     
     .modal-active-img {
-        max-height: 260px;
+        max-height: 250px; /* Optimize image fit on phone screens */
     }
     
     .nav-arrow {
@@ -967,6 +948,8 @@ body {
     
     .modal-details {
         padding: 20px;
+        flex-grow: 1; /* Cover remaining area */
+        overflow-y: visible; /* Scroll is handled by modal-container parent */
     }
     
     .modal-title h2 {
@@ -990,15 +973,9 @@ body {
         font-size: 0.65rem;
     }
     
-    .mapping-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4px;
-        padding: 10px;
-    }
-    
-    .mapping-item span[style*="direction"] {
-        display: none; /* Hide arrow in mobile stack */
+    .action-btn-row {
+        margin-top: 10px;
+        padding-top: 10px;
     }
 }
 
