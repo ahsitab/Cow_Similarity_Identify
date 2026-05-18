@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CowID Portal - Visual Intelligence Cow Database</title>
-    <meta name="description" content="A premium visual database and tracking system for clustered and identified cows using DinoV2 visual embeddings.">
+    <title>Chuadanga Agro Cows-2026 - Premium Livestock Similarity Portal</title>
+    <meta name="description" content="A premium agricultural database and tracking system for clustered and identified cows using DinoV2 visual embeddings.">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
@@ -14,14 +14,14 @@
         <div class="logo-section">
             <div class="logo-icon">🐄</div>
             <div class="logo-text">
-                <h1>CowID Portal</h1>
-                <p>Visual Intelligence Cow Identification Database</p>
+                <h1>Chuadanga Agro Cows-2026</h1>
+                <p>Premium Livestock Similarity Identification Database</p>
             </div>
         </div>
         <div class="header-cta-group">
-            <span style="font-size: 0.8rem; background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); padding: 6px 14px; border-radius: 20px; color: #818cf8; font-weight: 600;">
-                Model: DinoV2 Unsupervised
-            </span>
+            <a href="tel:01712687383" class="contact-header-btn" style="background: rgba(21, 128, 61, 0.08); border-color: rgba(21, 128, 61, 0.25); color: var(--primary);">
+                <span class="whatsapp-icon">📞</span> Call: 01712687383
+            </a>
             <a href="https://wa.me/8801712687383" target="_blank" class="contact-header-btn">
                 <span class="whatsapp-icon">💬</span> WhatsApp: 01712687383
             </a>
@@ -96,7 +96,7 @@
 
     <!-- Footer -->
     <footer class="app-footer">
-        <p>&copy; 2026 CowID System | Dynamic Visual Database Dashboard. All rights reserved.</p>
+        <p>&copy; 2026 Chuadanga Agro Cows-2026 | Visual Intelligence Catalog. All rights reserved.</p>
     </footer>
 
     <!-- Interactive Detail Modal -->
@@ -156,7 +156,7 @@
 
                 <!-- Footer Buttons inside Detail Modal -->
                 <div class="action-btn-row" id="modal-action-buttons">
-                    <!-- Loaded Dynamically to include custom wa link -->
+                    <!-- Loaded Dynamically to include custom call and wa links -->
                 </div>
             </div>
         </div>
@@ -280,7 +280,7 @@
                 }
 
                 // WhatsApp text pre-filled
-                const waMessage = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your portal.`);
+                const waMessage = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
                 const waLink = `https://wa.me/8801712687383?text=${waMessage}`;
 
                 card.innerHTML = `
@@ -307,10 +307,15 @@
                             </div>
                         </div>
 
-                        <!-- WhatsApp Inquiry Button -->
-                        <a href="${waLink}" target="_blank" class="whatsapp-btn" id="wa-btn-${cow.tag}">
-                            <span class="whatsapp-icon">💬</span> Inquiry WhatsApp
-                        </a>
+                        <!-- Inquiry Actions Row -->
+                        <div class="card-actions-row">
+                            <a href="${waLink}" target="_blank" class="btn-wa" id="wa-btn-${cow.tag}">
+                                <span class="whatsapp-icon">💬</span> WhatsApp
+                            </a>
+                            <a href="tel:01712687383" class="btn-call" id="call-btn-${cow.tag}">
+                                <span class="whatsapp-icon">📞</span> Call Now
+                            </a>
+                        </div>
 
                         <div class="thumbnail-preview-row">
                             ${miniThumbsHTML}
@@ -318,10 +323,10 @@
                     </div>
                 `;
 
-                // Set event listeners cleanly (WhatsApp button stops propagation so it doesn't open the modal)
+                // Set event listeners cleanly (buttons stop propagation so they don't open the modal)
                 card.querySelector(`#img-wrapper-${cow.tag}`).addEventListener('click', () => openCowModal(cow));
                 card.querySelector('.card-info').addEventListener('click', (e) => {
-                    if (!e.target.closest('.whatsapp-btn')) {
+                    if (!e.target.closest('.card-actions-row')) {
                         openCowModal(cow);
                     }
                 });
@@ -431,14 +436,19 @@
             }
 
             // Dynamically build action buttons to pass the correct tag message
-            const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your portal.`);
+            const waMessageModal = encodeURIComponent(`Hello! I am interested in Cow Tag ${cow.tag} on your Chuadanga Agro portal.`);
             const waLinkModal = `https://wa.me/8801712687383?text=${waMessageModal}`;
 
             modalActionButtons.innerHTML = `
-                <a href="${waLinkModal}" target="_blank" class="whatsapp-btn" style="padding: 14px; margin-bottom: 5px;">
-                    <span class="whatsapp-icon">💬</span> Contact Seller via WhatsApp
-                </a>
-                <button class="btn btn-secondary" id="modal-close-btn-footer">Close Details</button>
+                <div class="modal-actions-row">
+                    <a href="${waLinkModal}" target="_blank" class="btn-wa-lg">
+                        <span class="whatsapp-icon">💬</span> Inquiry via WhatsApp (01712687383)
+                    </a>
+                    <a href="tel:01712687383" class="btn-call-lg">
+                        <span class="whatsapp-icon">📞</span> Call Now: 01712687383
+                    </a>
+                    <button class="btn btn-secondary" id="modal-close-btn-footer" style="padding: 14px; border-radius: 12px; margin-top: 5px;">Close Details</button>
+                </div>
             `;
 
             // Bind click to the footer close button
