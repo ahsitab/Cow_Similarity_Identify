@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --bg-dark: #f8fafc; /* Beautiful light grey-slate backdrop */
+    --bg-dark: #ecffd2; /* Lite neon green background */
     --bg-card: #ffffff; /* Solid premium white cards */
     --border-color: rgba(22, 163, 74, 0.12); /* Delicate light brand green borders */
     --primary: #15803d; /* Premium Forest Green */
