@@ -1,509 +1,481 @@
 const COWS_DATA = [
-    {
-        "tag": "2601",
-        "original_names": [
-            "IMG-20260516-WA0022.jpg",
-            "IMG-20260516-WA0026.jpg",
-            "IMG-20260518-WA0034.jpg",
-            "IMG-20260518-WA0047.jpg",
-            "IMG-20260518-WA0051.jpg",
-            "IMG-20260518-WA0062.jpg",
-            "IMG-20260518-WA0073.jpg",
-            "IMG-20260518-WA0096.jpg"
-        ],
-        "images": [
-            "images/2601(1).jpg",
-            "images/2601(2).jpg",
-            "images/2601(3).jpg",
-            "images/2601(4).jpg",
-            "images/2601(5).jpg",
-            "images/2601(6).jpg",
-            "images/2601(7).jpg",
-            "images/2601(8).jpg"
-        ],
-        "image_count": 8,
-        "price": "Tk 360,000",
-        "status": "available",
-        "weight": "590 kg"
-    },
-    {
-        "tag": "2602",
-        "original_names": [
-            "IMG-20260516-WA0008.jpg",
-            "IMG-20260516-WA0016.jpg",
-            "IMG-20260518-WA0078.jpg",
-            "IMG-20260518-WA0080.jpg",
-            "IMG-20260518-WA0109.jpg",
-            "IMG-20260518-WA0137.jpg",
-            "IMG-20260518-WA0065.jpg",
-            "IMG-20260518-WA0068.jpg",
-            "IMG-20260518-WA0116.jpg",
-            "IMG-20260518-WA0119.jpg",
-            "IMG-20260518-WA0106.jpg"
-        ],
-        "images": [
-            "images/2602(1).jpg",
-            "images/2602(2).jpg",
-            "images/2602(3).jpg",
-            "images/2602(4).jpg",
-            "images/2602(5).jpg",
-            "images/2602(6).jpg",
-            "images/2602(7).jpg",
-            "images/2602(8).jpg",
-            "images/2602(9).jpg",
-            "images/2602(10).jpg",
-            "images/2602(11).jpg"
-        ],
-        "image_count": 11,
-        "price": "Tk 275,000",
-        "status": "available",
-        "weight": "470 kg"
-    },
-    {
-        "tag": "2603",
-        "original_names": [
-            "IMG-20260516-WA0017.jpg",
-            "IMG-20260518-WA0038.jpg",
-            "IMG-20260518-WA0042.jpg",
-            "IMG-20260518-WA0059.jpg",
-            "IMG-20260518-WA0070.jpg",
-            "IMG-20260518-WA0081.jpg",
-            "IMG-20260518-WA0076.jpg",
-            "IMG-20260518-WA0097.jpg"
-        ],
-        "images": [
-            "images/2603(1).jpg",
-            "images/2603(2).jpg",
-            "images/2603(3).jpg",
-            "images/2603(4).jpg",
-            "images/2603(5).jpg",
-            "images/2603(6).jpg",
-            "images/2603(7).jpg",
-            "images/2603(8).jpg"
-        ],
-        "image_count": 8,
-        "price": "Tk 340,000",
-        "status": "available",
-        "weight": "575 kg"
-    },
-    {
-        "tag": "2604",
-        "original_names": [
-            "IMG-20260516-WA0003.jpg",
-            "IMG-20260518-WA0053.jpg",
-            "IMG-20260518-WA0066.jpg",
-            "IMG-20260518-WA0075.jpg",
-            "IMG-20260518-WA0105.jpg",
-            "2.jpeg",
-            "IMG-20260518-WA0091.jpg",
-            "IMG-20260518-WA0045.jpg",
-            "IMG-20260518-WA0079.jpg",
-            "IMG-20260518-WA0033.jpg"
-        ],
-        "images": [
-            "images/2604(1).jpg",
-            "images/2604(2).jpg",
-            "images/2604(3).jpg",
-            "images/2604(4).jpg",
-            "images/2604(5).jpg",
-            "images/2604(6).jpeg",
-            "images/2604(7).jpg",
-            "images/2604(8).jpg",
-            "images/2604(9).jpg",
-            "images/2604(10).jpg"
-        ],
-        "image_count": 10,
-        "price": "Tk 470,000",
-        "status": "available",
-        "weight": "670 kg"
-    },
-    {
-        "tag": "2605",
-        "original_names": [
-            "IMG-20260516-WA0023.jpg",
-            "IMG-20260518-WA0039.jpg",
-            "IMG-20260518-WA0072.jpg",
-            "IMG-20260518-WA0092.jpg",
-            "IMG-20260518-WA0125.jpg",
-            "IMG-20260518-WA0069.jpg",
-            "IMG-20260518-WA0086.jpg",
-            "IMG-20260518-WA0089.jpg"
-        ],
-        "images": [
-            "images/2605(1).jpg",
-            "images/2605(2).jpg",
-            "images/2605(3).jpg",
-            "images/2605(4).jpg",
-            "images/2605(5).jpg",
-            "images/2605(6).jpg",
-            "images/2605(7).jpg",
-            "images/2605(8).jpg"
-        ],
-        "image_count": 8,
-        "price": "Tk 530,000",
-        "status": "available",
-        "weight": "690 kg"
-    },
-    {
-        "tag": "2606",
-        "original_names": [
-            "IMG-20260516-WA0005.jpg",
-            "IMG-20260518-WA0093.jpg",
-            "IMG-20260518-WA0103.jpg",
-            "IMG-20260518-WA0135.jpg",
-            "IMG-20260516-WA0029.jpg",
-            "IMG-20260518-WA0087.jpg",
-            "IMG-20260518-WA0098.jpg",
-            "IMG-20260518-WA0099.jpg",
-            "IMG-20260518-WA0107.jpg",
-            "IMG-20260518-WA0126.jpg",
-            "IMG-20260518-WA0131.jpg"
-        ],
-        "images": [
-            "images/2606(1).jpg",
-            "images/2606(2).jpg",
-            "images/2606(3).jpg",
-            "images/2606(4).jpg",
-            "images/2606(5).jpg",
-            "images/2606(6).jpg",
-            "images/2606(7).jpg",
-            "images/2606(8).jpg",
-            "images/2606(9).jpg",
-            "images/2606(10).jpg",
-            "images/2606(11).jpg"
-        ],
-        "image_count": 11,
-        "price": "Tk 135000/",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2607",
-        "original_names": [
-            "IMG-20260518-WA0037.jpg",
-            "IMG-20260518-WA0050.jpg",
-            "IMG-20260518-WA0095.jpg",
-            "IMG-20260518-WA0136.jpg",
-            "IMG-20260518-WA0052.jpg",
-            "WhatsApp Image 2026-05-16 at 21.26.55.jpeg",
-            "IMG-20260518-WA0101.jpg"
-        ],
-        "images": [
-            "images/2607(1).jpg",
-            "images/2607(2).jpg",
-            "images/2607(3).jpg",
-            "images/2607(4).jpg",
-            "images/2607(5).jpg",
-            "images/2607(6).jpeg",
-            "images/2607(7).jpg"
-        ],
-        "image_count": 7,
-        "price": "Tk 160,000",
-        "status": "available",
-        "weight": "315 kg"
-    },
-    {
-        "tag": "2608",
-        "original_names": [
-            "IMG-20260518-WA0058.jpg",
-            "IMG-20260518-WA0088.jpg",
-            "IMG-20260518-WA0118.jpg",
-            "IMG-20260518-WA0120.jpg",
-            "IMG-20260518-WA0130.jpg"
-        ],
-        "images": [
-            "images/2608(1).jpg",
-            "images/2608(2).jpg",
-            "images/2608(3).jpg",
-            "images/2608(4).jpg",
-            "images/2608(5).jpg"
-        ],
-        "image_count": 5,
-        "price": "Tk 150,000",
-        "status": "available",
-        "weight": "290 kg"
-    },
-    {
-        "tag": "2610",
-        "original_names": [
-            "IMG-20260518-WA0043.jpg",
-            "IMG-20260518-WA0054.jpg",
-            "IMG-20260518-WA0112.jpg",
-            "IMG-20260518-WA0084.jpg",
-            "IMG-20260518-WA0085.jpg"
-        ],
-        "images": [
-            "images/2610(1).jpg",
-            "images/2610(2).jpg",
-            "images/2610(3).jpg",
-            "images/2610(4).jpg",
-            "images/2610(5).jpg"
-        ],
-        "image_count": 5,
-        "price": "Tk 380,000",
-        "status": "available",
-        "weight": "580 kg"
-    },
-    {
-        "tag": "2611",
-        "original_names": [
-            "IMG-20260518-WA0046.jpg",
-            "IMG-20260518-WA0082.jpg",
-            "IMG-20260518-WA0123.jpg",
-            "IMG-20260518-WA0056.jpg",
-            "IMG-20260518-WA0064.jpg"
-        ],
-        "images": [
-            "images/2611(1).jpg",
-            "images/2611(2).jpg",
-            "images/2611(3).jpg",
-            "images/2611(4).jpg",
-            "images/2611(5).jpg"
-        ],
-        "image_count": 5,
-        "price": "Tk 480,000",
-        "status": "available",
-        "weight": "685 kg"
-    },
-    {
-        "tag": "2617",
-        "original_names": [
-            "2617.jpeg",
-            "IMG-20260516-WA0012.jpg",
-            "IMG-20260518-WA0104.jpg"
-        ],
-        "images": [
-            "images/2617(1).jpg",
-            "images/2617(2).jpg",
-            "images/2617(3).jpg"
-        ],
-        "image_count": 3,
-        "price": "Nego",
-        "status": "available",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2618",
-        "original_names": [
-            "IMG-20260518-WA0032.jpg",
-            "IMG-20260518-WA0035.jpg"
-        ],
-        "images": [
-            "images/2618(1).jpg",
-            "images/2618(2).jpg"
-        ],
-        "image_count": 2,
-        "price": "Nego",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2619",
-        "original_names": [
-            "IMG-20260518-WA0036.jpg",
-            "IMG-20260518-WA0117.jpg"
-        ],
-        "images": [
-            "images/2619(1).jpg",
-            "images/2619(2).jpg"
-        ],
-        "image_count": 2,
-        "price": "Nego",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2621",
-        "original_names": [
-            "IMG-20260518-WA0049.jpg",
-            "IMG-20260518-WA0102.jpg"
-        ],
-        "images": [
-            "images/2621(1).jpg",
-            "images/2621(2).jpg"
-        ],
-        "image_count": 2,
-        "price": "Nego",
-        "status": "available",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2625",
-        "original_names": [
-            "IMG-20260518-WA0071.jpg",
-            "IMG-20260518-WA0138.jpg"
-        ],
-        "images": [
-            "images/2625(1).jpg",
-            "images/2625(2).jpg"
-        ],
-        "image_count": 2,
-        "price": "Nego",
-        "status": "available",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2626",
-        "original_names": [
-            "IMG-20260518-WA0083.jpg",
-            "IMG-20260518-WA0110.jpg"
-        ],
-        "images": [
-            "images/2626(1).jpg",
-            "images/2626(2).jpg"
-        ],
-        "image_count": 2,
-        "price": "Nego",
-        "status": "available",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2627",
-        "original_names": [
-            "IMG-20260518-WA0094.jpg",
-            "IMG-20260518-WA0124.jpg"
-        ],
-        "images": [
-            "images/2627(1).jpg",
-            "images/2627(2).jpg"
-        ],
-        "image_count": 2,
-        "price": "Nego",
-        "status": "available",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2630",
-        "original_names": [
-            "IMG-20260516-WA0030.jpg"
-        ],
-        "images": [
-            "images/2630(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "available",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2632",
-        "original_names": [
-            "IMG-20260518-WA0041.jpg"
-        ],
-        "images": [
-            "images/2632(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2633",
-        "original_names": [
-            "IMG-20260518-WA0044.jpg"
-        ],
-        "images": [
-            "images/2633(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2635",
-        "original_names": [
-            "IMG-20260518-WA0060.jpg"
-        ],
-        "images": [
-            "images/2635(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2637",
-        "original_names": [
-            "IMG-20260518-WA0067.jpg"
-        ],
-        "images": [
-            "images/2637(1).jpg"
-        ],
-        "image_count": 1,
-        "price": "Nego",
-        "status": "stock_out",
-        "weight": "TBA"
-    },
-    {
-        "tag": "2649",
-        "images": [
-            "images/2649(1).jpg"
-        ],
-        "image_count": 1,
-        "original_names": [
-            "IMG-20260518-WA0128.jpg"
-        ],
-        "price": "Tk 140000/",
-        "status": "available",
-        "weight": "265 kg"
-    },
-    {
-        "tag": "2651",
-        "images": [
-            "images/2651(1).jpg",
-            "images/2651(2).jpg"
-        ],
-        "image_count": 2,
-        "original_names": [
-            "2651.jpeg",
-            "2651(1).jpeg"
-        ],
-        "price": "Tk 135000/",
-        "status": "available",
-        "weight": "245 kg"
-    },
-    {
-        "tag": "2652",
-        "images": [
-            "images/2652(1).jpg"
-        ],
-        "image_count": 1,
-        "original_names": [
-            "2652.jpeg"
-        ],
-        "price": "Tk 130000/",
-        "status": "available",
-        "weight": "240 kg"
-    },
-    {
-        "tag": "2653",
-        "images": [
-            "images/2653(1).jpg"
-        ],
-        "image_count": 1,
-        "original_names": [
-            "2653.jpeg"
-        ],
-        "price": "Tk 135000/",
-        "status": "available",
-        "weight": "235 kg"
-    },
-    {
-        "tag": "2657",
-        "images": [
-            "images/2657(1).jpg",
-            "images/2657(2).jpg"
-        ],
-        "image_count": 2,
-        "original_names": [
-            "2657.jpeg",
-            "2657(1).jpeg"
-        ],
-        "price": "Tk 145000/",
-        "status": "available",
-        "weight": "255 kg"
-    }
+  {
+    "tag": "2601",
+    "original_names": [
+      "IMG-20260516-WA0022.jpg",
+      "IMG-20260516-WA0026.jpg",
+      "IMG-20260518-WA0034.jpg",
+      "IMG-20260518-WA0047.jpg",
+      "IMG-20260518-WA0051.jpg",
+      "IMG-20260518-WA0062.jpg",
+      "IMG-20260518-WA0073.jpg",
+      "IMG-20260518-WA0096.jpg"
+    ],
+    "images": [
+      "images/2601(1).jpg",
+      "images/2601(2).jpg",
+      "images/2601(3).jpg",
+      "images/2601(4).jpg",
+      "images/2601(5).jpg",
+      "images/2601(6).jpg",
+      "images/2601(7).jpg",
+      "images/2601(8).jpg"
+    ],
+    "image_count": 8,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "590 kg"
+  },
+  {
+    "tag": "2602",
+    "original_names": [
+      "IMG-20260516-WA0008.jpg",
+      "IMG-20260516-WA0016.jpg",
+      "IMG-20260518-WA0078.jpg",
+      "IMG-20260518-WA0080.jpg",
+      "IMG-20260518-WA0109.jpg",
+      "IMG-20260518-WA0137.jpg",
+      "IMG-20260518-WA0065.jpg",
+      "IMG-20260518-WA0068.jpg",
+      "IMG-20260518-WA0116.jpg",
+      "IMG-20260518-WA0119.jpg",
+      "IMG-20260518-WA0106.jpg"
+    ],
+    "images": [
+      "images/2602(1).jpg",
+      "images/2602(2).jpg",
+      "images/2602(3).jpg",
+      "images/2602(4).jpg",
+      "images/2602(5).jpg",
+      "images/2602(6).jpg",
+      "images/2602(7).jpg",
+      "images/2602(8).jpg",
+      "images/2602(9).jpg",
+      "images/2602(10).jpg",
+      "images/2602(11).jpg"
+    ],
+    "image_count": 11,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "470 kg"
+  },
+  {
+    "tag": "2603",
+    "original_names": [
+      "IMG-20260516-WA0017.jpg",
+      "IMG-20260518-WA0038.jpg",
+      "IMG-20260518-WA0042.jpg",
+      "IMG-20260518-WA0059.jpg",
+      "IMG-20260518-WA0070.jpg",
+      "IMG-20260518-WA0081.jpg",
+      "IMG-20260518-WA0076.jpg",
+      "IMG-20260518-WA0097.jpg"
+    ],
+    "images": [
+      "images/2603(1).jpg",
+      "images/2603(2).jpg",
+      "images/2603(3).jpg",
+      "images/2603(4).jpg",
+      "images/2603(5).jpg",
+      "images/2603(6).jpg",
+      "images/2603(7).jpg",
+      "images/2603(8).jpg"
+    ],
+    "image_count": 8,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "575 kg"
+  },
+  {
+    "tag": "2604",
+    "original_names": [
+      "IMG-20260516-WA0003.jpg",
+      "IMG-20260518-WA0053.jpg",
+      "IMG-20260518-WA0066.jpg",
+      "IMG-20260518-WA0075.jpg",
+      "IMG-20260518-WA0105.jpg",
+      "2.jpeg",
+      "IMG-20260518-WA0091.jpg",
+      "IMG-20260518-WA0045.jpg",
+      "IMG-20260518-WA0079.jpg",
+      "IMG-20260518-WA0033.jpg"
+    ],
+    "images": [
+      "images/2604(1).jpg",
+      "images/2604(2).jpg",
+      "images/2604(3).jpg",
+      "images/2604(4).jpg",
+      "images/2604(5).jpg",
+      "images/2604(6).jpeg",
+      "images/2604(7).jpg",
+      "images/2604(8).jpg",
+      "images/2604(9).jpg",
+      "images/2604(10).jpg"
+    ],
+    "image_count": 10,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "670 kg"
+  },
+  {
+    "tag": "2605",
+    "original_names": [
+      "IMG-20260516-WA0023.jpg",
+      "IMG-20260518-WA0039.jpg",
+      "IMG-20260518-WA0072.jpg",
+      "IMG-20260518-WA0092.jpg",
+      "IMG-20260518-WA0125.jpg",
+      "IMG-20260518-WA0069.jpg",
+      "IMG-20260518-WA0086.jpg",
+      "IMG-20260518-WA0089.jpg"
+    ],
+    "images": [
+      "images/2605(1).jpg",
+      "images/2605(2).jpg",
+      "images/2605(3).jpg",
+      "images/2605(4).jpg",
+      "images/2605(5).jpg",
+      "images/2605(6).jpg",
+      "images/2605(7).jpg",
+      "images/2605(8).jpg"
+    ],
+    "image_count": 8,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "690 kg"
+  },
+  {
+    "tag": "2606",
+    "original_names": [
+      "IMG-20260516-WA0005.jpg",
+      "IMG-20260518-WA0093.jpg",
+      "IMG-20260518-WA0103.jpg",
+      "IMG-20260518-WA0135.jpg",
+      "IMG-20260516-WA0029.jpg",
+      "IMG-20260518-WA0087.jpg",
+      "IMG-20260518-WA0098.jpg",
+      "IMG-20260518-WA0099.jpg",
+      "IMG-20260518-WA0107.jpg",
+      "IMG-20260518-WA0126.jpg",
+      "IMG-20260518-WA0131.jpg"
+    ],
+    "images": [
+      "images/2606(1).jpg",
+      "images/2606(2).jpg",
+      "images/2606(3).jpg",
+      "images/2606(4).jpg",
+      "images/2606(5).jpg",
+      "images/2606(6).jpg",
+      "images/2606(7).jpg",
+      "images/2606(8).jpg",
+      "images/2606(9).jpg",
+      "images/2606(10).jpg",
+      "images/2606(11).jpg"
+    ],
+    "image_count": 11,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2607",
+    "original_names": [
+      "IMG-20260518-WA0037.jpg",
+      "IMG-20260518-WA0050.jpg",
+      "IMG-20260518-WA0095.jpg",
+      "IMG-20260518-WA0136.jpg",
+      "IMG-20260518-WA0052.jpg",
+      "WhatsApp Image 2026-05-16 at 21.26.55.jpeg",
+      "IMG-20260518-WA0101.jpg"
+    ],
+    "images": [
+      "images/2607(1).jpg",
+      "images/2607(2).jpg",
+      "images/2607(3).jpg",
+      "images/2607(4).jpg",
+      "images/2607(5).jpg",
+      "images/2607(6).jpeg",
+      "images/2607(7).jpg"
+    ],
+    "image_count": 7,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "315 kg"
+  },
+  {
+    "tag": "2608",
+    "original_names": [
+      "IMG-20260518-WA0058.jpg",
+      "IMG-20260518-WA0088.jpg",
+      "IMG-20260518-WA0118.jpg",
+      "IMG-20260518-WA0120.jpg",
+      "IMG-20260518-WA0130.jpg"
+    ],
+    "images": [
+      "images/2608(1).jpg",
+      "images/2608(2).jpg",
+      "images/2608(3).jpg",
+      "images/2608(4).jpg",
+      "images/2608(5).jpg"
+    ],
+    "image_count": 5,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "290 kg"
+  },
+  {
+    "tag": "2610",
+    "original_names": [
+      "IMG-20260518-WA0043.jpg",
+      "IMG-20260518-WA0054.jpg",
+      "IMG-20260518-WA0112.jpg",
+      "IMG-20260518-WA0084.jpg",
+      "IMG-20260518-WA0085.jpg"
+    ],
+    "images": [
+      "images/2610(1).jpg",
+      "images/2610(2).jpg",
+      "images/2610(3).jpg",
+      "images/2610(4).jpg",
+      "images/2610(5).jpg"
+    ],
+    "image_count": 5,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "580 kg"
+  },
+  {
+    "tag": "2611",
+    "original_names": [
+      "IMG-20260518-WA0046.jpg",
+      "IMG-20260518-WA0082.jpg",
+      "IMG-20260518-WA0123.jpg",
+      "IMG-20260518-WA0056.jpg",
+      "IMG-20260518-WA0064.jpg"
+    ],
+    "images": [
+      "images/2611(1).jpg",
+      "images/2611(2).jpg",
+      "images/2611(3).jpg",
+      "images/2611(4).jpg",
+      "images/2611(5).jpg"
+    ],
+    "image_count": 5,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "685 kg"
+  },
+  {
+    "tag": "2618",
+    "original_names": [
+      "IMG-20260518-WA0032.jpg",
+      "IMG-20260518-WA0035.jpg"
+    ],
+    "images": [
+      "images/2618(1).jpg",
+      "images/2618(2).jpg"
+    ],
+    "image_count": 2,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2619",
+    "original_names": [
+      "IMG-20260518-WA0036.jpg",
+      "IMG-20260518-WA0117.jpg"
+    ],
+    "images": [
+      "images/2619(1).jpg",
+      "images/2619(2).jpg"
+    ],
+    "image_count": 2,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2625",
+    "original_names": [
+      "IMG-20260518-WA0071.jpg",
+      "IMG-20260518-WA0138.jpg"
+    ],
+    "images": [
+      "images/2625(1).jpg",
+      "images/2625(2).jpg"
+    ],
+    "image_count": 2,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "490 kg"
+  },
+  {
+    "tag": "2626",
+    "original_names": [
+      "IMG-20260518-WA0083.jpg",
+      "IMG-20260518-WA0110.jpg"
+    ],
+    "images": [
+      "images/2626(1).jpg",
+      "images/2626(2).jpg"
+    ],
+    "image_count": 2,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2627",
+    "original_names": [
+      "IMG-20260518-WA0094.jpg",
+      "IMG-20260518-WA0124.jpg"
+    ],
+    "images": [
+      "images/2627(1).jpg",
+      "images/2627(2).jpg"
+    ],
+    "image_count": 2,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2630",
+    "original_names": [
+      "IMG-20260516-WA0030.jpg"
+    ],
+    "images": [
+      "images/2630(1).jpg"
+    ],
+    "image_count": 1,
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "245 kg"
+  },
+  {
+    "tag": "2632",
+    "original_names": [
+      "IMG-20260518-WA0041.jpg"
+    ],
+    "images": [
+      "images/2632(1).jpg"
+    ],
+    "image_count": 1,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2633",
+    "original_names": [
+      "IMG-20260518-WA0044.jpg"
+    ],
+    "images": [
+      "images/2633(1).jpg"
+    ],
+    "image_count": 1,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2635",
+    "original_names": [
+      "IMG-20260518-WA0060.jpg"
+    ],
+    "images": [
+      "images/2635(1).jpg"
+    ],
+    "image_count": 1,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2637",
+    "original_names": [
+      "IMG-20260518-WA0067.jpg"
+    ],
+    "images": [
+      "images/2637(1).jpg"
+    ],
+    "image_count": 1,
+    "price": "Negotiable",
+    "status": "stock_out",
+    "weight": "TBA"
+  },
+  {
+    "tag": "2649",
+    "images": [
+      "images/2649(1).jpg",
+      "images/2649(2).jpg",
+      "images/2649(3).jpg"
+    ],
+    "image_count": 3,
+    "original_names": [
+      "IMG-20260518-WA0128.jpg",
+      "IMG-20260516-WA0012.jpg",
+      "IMG-20260518-WA0104.jpg"
+    ],
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "505 kg"
+  },
+  {
+    "tag": "2651",
+    "images": [
+      "images/2651(1).jpg",
+      "images/2651(2).jpg"
+    ],
+    "image_count": 2,
+    "original_names": [
+      "2651.jpeg",
+      "2651(1).jpeg"
+    ],
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "245 kg"
+  },
+  {
+    "tag": "2652",
+    "images": [
+      "images/2652(1).jpg"
+    ],
+    "image_count": 1,
+    "original_names": [
+      "2652.jpeg"
+    ],
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "240 kg"
+  },
+  {
+    "tag": "2653",
+    "images": [
+      "images/2653(1).jpg"
+    ],
+    "image_count": 1,
+    "original_names": [
+      "2653.jpeg"
+    ],
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "235 kg"
+  },
+  {
+    "tag": "2657",
+    "images": [
+      "images/2657(1).jpg",
+      "images/2657(2).jpg"
+    ],
+    "image_count": 2,
+    "original_names": [
+      "2657.jpeg",
+      "2657(1).jpeg"
+    ],
+    "price": "Negotiable",
+    "status": "available",
+    "weight": "255 kg"
+  }
 ];
