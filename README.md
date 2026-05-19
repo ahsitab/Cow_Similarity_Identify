@@ -2,7 +2,7 @@
 
 An interactive, high-fidelity web dashboard, visual database, and catalog for tracking, grouping, and inquiring about individual cows based on visual similarity. This system utilizes a state-of-the-art self-supervised deep learning model (**DinoV2**) to extract semantic feature embeddings from 112 cow photos, clustering them into **51 distinct cows** with **100% visual accuracy and 0 false positives**.
 
-This portal is fully optimized for **mobile phones** and incorporates direct **WhatsApp contact integration** (Number: `01712687383`), turning the database into a functional livestock marketplace.
+This portal is fully optimized for **mobile phones** and incorporates direct **Call and WhatsApp contact integration** (Call: `01521571792`, WhatsApp: `01981532123`), turning the database into a functional livestock marketplace.
 
 ---
 
@@ -11,7 +11,7 @@ This portal is fully optimized for **mobile phones** and incorporates direct **W
 * **Visual Analytics Stats Bar:** Instantly tracks Unique Cows, Total Images, Average Photos per Cow, and Recurring Cows. Fully stacks and scales on mobile viewports.
 * **Image Organization:** All 112 renamed cow photos are organized cleanly within a dedicated `images/` directory, keeping the project root light and neat.
 * **Direct WhatsApp Integration:**
-  * Global floating WhatsApp header link (`💬 WhatsApp: 01712687383`).
+  * Global floating Call and WhatsApp header links (`📞 Call: 01521571792` & `💬 WhatsApp: 01981532123`).
   * Direct **Inquiry WhatsApp** buttons on every cow card and inside the detail modal.
   * Clicking any button dynamically opens a chat with a custom, pre-filled inquiry text identifying the specific cow:
     `Hello! I am interested in Cow Tag [TagID] on your portal.`
