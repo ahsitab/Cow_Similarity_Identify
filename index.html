@@ -31,6 +31,36 @@
         </div>
     </header>
 
+    <!-- Pricing Banner (Landscape, Green Background, Static Position) -->
+    <section class="pricing-banner-section">
+        <div class="pricing-banner-card">
+            <div class="pricing-banner-info">
+                <p class="pricing-banner-tagline">কুরবানির জন্য আমাদের ফার্মের সম্পূর্ণ প্রাকৃতিক পরিবেশে বেড়ে ওঠা নিখুঁত গরু কিনতে আপনার পছন্দেরটি আমাদের জানান।</p>
+                <div class="pricing-banner-rules">
+                    <div class="banner-rule-item">
+                        <span class="banner-rule-lbl">ওজন ৩০০ কেজি পর্যন্ত</span>
+                        <span class="banner-rule-val">৫২৫ টাকা / কেজি</span>
+                    </div>
+                    <div class="banner-rule-item">
+                        <span class="banner-rule-lbl">ওজন ৩০১ - ৪০০ কেজি</span>
+                        <span class="banner-rule-val">৫৪০ টাকা / কেজি</span>
+                    </div>
+                    <div class="banner-rule-item">
+                        <span class="banner-rule-lbl">ওজন ৪০০ কেজির উপরে</span>
+                        <span class="banner-rule-val">আলোচনা সাপেক্ষে</span>
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-banner-contacts">
+                <span class="banner-contact-lbl">যোগাযোগঃ</span>
+                <div class="banner-contact-nums">
+                    <a href="tel:01557766933" class="banner-phone-btn">📞 ০১৫৫৭-৭৬৬৯৩৩</a>
+                    <a href="tel:01521571792" class="banner-phone-btn">📞 ০১৫২১-৫৭১৭৯২</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- TV News Ticker Banner -->
     <div class="news-ticker-container">
         <div class="ticker-label">🔥 BREAKING NEWS</div>
@@ -41,66 +71,32 @@
         </div>
     </div>
 
-    <!-- Main Content Layout -->
-    <div class="main-layout">
-        <div class="content-left">
-            <!-- Control Panel -->
-            <section class="control-panel">
-                <div class="control-card">
-                    <!-- Live Search -->
-                    <div class="search-wrapper">
-                        <span class="search-icon">🔍</span>
-                        <input type="text" id="search-input" class="search-input" placeholder="Search by Cow Tag ID (e.g. 2601)...">
-                    </div>
-
-                    <!-- Sorting -->
-                    <div class="sort-wrapper">
-                        <span class="sort-label">Sort by:</span>
-                        <select id="sort-select" class="sort-select">
-                            <option value="tag-asc">Tag ID (Asc)</option>
-                            <option value="tag-desc">Tag ID (Desc)</option>
-                            <option value="count-desc">Photo Count (High → Low)</option>
-                            <option value="count-asc">Photo Count (Low → High)</option>
-                        </select>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Main Cow Cards Grid -->
-            <main class="gallery-grid" id="gallery-grid">
-                <!-- Rendered Dynamically via JS -->
-            </main>
-        </div>
-
-        <!-- Sticky Sidebar / Hero Info Section -->
-        <aside class="sticky-sidebar">
-            <div class="sticky-card">
-                <h3 class="sticky-card-title">⚖️ লাইভ ওজন ও মূল্য তালিকা</h3>
-                <div class="sticky-price-rules">
-                    <div class="sticky-price-rule">
-                        <span class="rule-label">ওজন ৩০০ কেজি পর্যন্ত</span>
-                        <span class="rule-value">৫২৫ টাকা / কেজি</span>
-                    </div>
-                    <div class="sticky-price-rule">
-                        <span class="rule-label">ওজন ৩০১ - ৪০০ কেজি</span>
-                        <span class="rule-value">৫৪০ টাকা / কেজি</span>
-                    </div>
-                    <div class="sticky-price-rule">
-                        <span class="rule-label">ওজন ৪০০ কেজির উপরে</span>
-                        <span class="rule-value">আলোচনা সাপেক্ষে</span>
-                    </div>
-                </div>
-                
-                <p class="sticky-tagline">কুরবানির জন্য আমাদের ফার্মের সম্পূর্ণ প্রাকৃতিক পরিবেশে বেড়ে ওঠা নিখুঁত গরু কিনতে আপনার পছন্দেরটি আমাদের জানান।</p>
-                
-                <div class="sticky-contacts">
-                    <div class="contact-header-lbl">যোগাযোগঃ</div>
-                    <a href="tel:01557766933" class="contact-num-btn">📞 ০১৫৫৭-৭৬৬৯৩৩</a>
-                    <a href="tel:01521571792" class="contact-num-btn">📞 ০১৫২১-৫৭১৭৯২</a>
-                </div>
+    <!-- Control Panel -->
+    <section class="control-panel">
+        <div class="control-card">
+            <!-- Live Search -->
+            <div class="search-wrapper">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="search-input" class="search-input" placeholder="Search by Cow Tag ID (e.g. 2601)...">
             </div>
-        </aside>
-    </div>
+
+            <!-- Sorting -->
+            <div class="sort-wrapper">
+                <span class="sort-label">Sort by:</span>
+                <select id="sort-select" class="sort-select">
+                    <option value="tag-asc">Tag ID (Asc)</option>
+                    <option value="tag-desc">Tag ID (Desc)</option>
+                    <option value="count-desc">Photo Count (High → Low)</option>
+                    <option value="count-asc">Photo Count (Low → High)</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Cow Cards Grid -->
+    <main class="gallery-grid" id="gallery-grid">
+        <!-- Rendered Dynamically via JS -->
+    </main>
 
     <!-- Footer -->
     <footer class="app-footer">
