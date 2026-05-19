@@ -1387,94 +1387,171 @@ body {
 .eid-item {
     position: absolute;
     font-size: 2.2rem;
-    opacity: 0.15; /* Soft background integration */
-    animation: floatWater 12s ease-in-out infinite alternate;
+    opacity: 0.26; /* Brighter visibility integration */
 }
 
-/* Floating water type sway + vertical drift motion */
-@keyframes floatWater {
+/* Floating water type sway keyframes */
+@keyframes floatWaterRight {
     0% {
         transform: translateY(0) translateX(0) rotate(0deg);
     }
     50% {
-        transform: translateY(-20px) translateX(15px) rotate(8deg);
+        transform: translateY(-25px) translateX(20px) rotate(6deg);
     }
     100% {
-        transform: translateY(-40px) translateX(-15px) rotate(-8deg);
+        transform: translateY(-50px) translateX(40px) rotate(12deg);
+    }
+}
+
+@keyframes floatWaterLeft {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-30px) translateX(-20px) rotate(-6deg);
+    }
+    100% {
+        transform: translateY(-55px) translateX(-40px) rotate(-12deg);
+    }
+}
+
+@keyframes floatWaterVertical {
+    0% {
+        transform: translateY(0) translateX(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-35px) translateX(10px) rotate(4deg);
+    }
+    100% {
+        transform: translateY(-70px) translateX(-10px) rotate(-4deg);
     }
 }
 
 /* Positioning different elements */
-.item-moon {
-    top: 15%;
-    left: 8%;
-    font-size: 3.5rem;
-    animation-duration: 16s;
-    opacity: 0.18;
+.item-moon-1 {
+    top: 12%;
+    left: 6%;
+    font-size: 3.8rem;
+    opacity: 0.32;
+    animation: floatWaterRight 18s ease-in-out infinite alternate;
 }
 
 .item-star-1 {
-    top: 25%;
-    right: 12%;
+    top: 22%;
+    right: 14%;
     font-size: 2rem;
-    animation-duration: 10s;
-    animation-delay: 1s;
+    opacity: 0.28;
+    animation: floatWaterLeft 12s ease-in-out infinite alternate;
 }
 
 .item-star-2 {
-    top: 45%;
-    left: 5%;
+    top: 42%;
+    left: 4%;
     font-size: 1.8rem;
-    animation-duration: 14s;
-    animation-delay: 2s;
+    opacity: 0.25;
+    animation: floatWaterVertical 14s ease-in-out infinite alternate;
 }
 
-.item-mosque {
-    top: 35%;
-    right: 6%;
-    font-size: 3rem;
-    animation-duration: 17s;
-    opacity: 0.12;
+.item-mosque-1 {
+    top: 32%;
+    right: 5%;
+    font-size: 3.2rem;
+    opacity: 0.24;
+    animation: floatWaterLeft 16s ease-in-out infinite alternate;
 }
 
 .item-lantern-1 {
-    top: 12%;
-    right: 25%;
-    font-size: 2.8rem;
-    animation-duration: 18s;
-    opacity: 0.12;
+    top: 8%;
+    right: 28%;
+    font-size: 3rem;
+    opacity: 0.26;
+    animation: floatWaterVertical 20s ease-in-out infinite alternate;
 }
 
 .item-star-3 {
-    top: 70%;
+    top: 68%;
     right: 8%;
     font-size: 2.2rem;
-    animation-duration: 12s;
-    animation-delay: 3s;
+    opacity: 0.28;
+    animation: floatWaterRight 13s ease-in-out infinite alternate;
 }
 
 .item-star-4 {
-    top: 85%;
-    left: 12%;
-    font-size: 1.6rem;
-    animation-duration: 15s;
-    animation-delay: 0.5s;
+    top: 88%;
+    left: 10%;
+    font-size: 1.8rem;
+    opacity: 0.24;
+    animation: floatWaterLeft 15s ease-in-out infinite alternate;
 }
 
 .item-moon-2 {
-    top: 60%;
+    top: 58%;
     left: 18%;
-    font-size: 2.5rem;
-    animation-duration: 20s;
-    animation-delay: 4s;
-    opacity: 0.1;
+    font-size: 2.8rem;
+    opacity: 0.28;
+    animation: floatWaterVertical 17s ease-in-out infinite alternate;
 }
 
 .item-lantern-2 {
-    top: 75%;
-    left: 45%;
+    top: 72%;
+    left: 42%;
+    font-size: 2.6rem;
+    opacity: 0.22;
+    animation: floatWaterRight 14s ease-in-out infinite alternate;
+}
+
+.item-star-5 {
+    top: 15%;
+    left: 48%;
+    font-size: 2.2rem;
+    opacity: 0.25;
+    animation: floatWaterLeft 11s ease-in-out infinite alternate;
+}
+
+.item-star-6 {
+    top: 50%;
+    right: 22%;
+    font-size: 1.9rem;
+    opacity: 0.26;
+    animation: floatWaterVertical 13s ease-in-out infinite alternate;
+}
+
+.item-mosque-2 {
+    top: 78%;
+    right: 32%;
+    font-size: 2.8rem;
+    opacity: 0.22;
+    animation: floatWaterRight 19s ease-in-out infinite alternate;
+}
+
+.item-lantern-3 {
+    top: 48%;
+    left: 32%;
     font-size: 2.4rem;
-    animation-duration: 14s;
-    animation-delay: 1.5s;
-    opacity: 0.08;
+    opacity: 0.23;
+    animation: floatWaterLeft 15s ease-in-out infinite alternate;
+}
+
+.item-moon-3 {
+    top: 82%;
+    left: 28%;
+    font-size: 3rem;
+    opacity: 0.28;
+    animation: floatWaterVertical 18s ease-in-out infinite alternate;
+}
+
+.item-star-7 {
+    top: 30%;
+    left: 24%;
+    font-size: 2rem;
+    opacity: 0.26;
+    animation: floatWaterRight 12s ease-in-out infinite alternate;
+}
+
+.item-star-8 {
+    top: 62%;
+    right: 48%;
+    font-size: 2.1rem;
+    opacity: 0.27;
+    animation: floatWaterLeft 14s ease-in-out infinite alternate;
 }
